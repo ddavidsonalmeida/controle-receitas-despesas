@@ -5,3 +5,4 @@
 - Criação de componentes
 - Criação das rotas
 - Escrever o CSS Global
+- Implementar o Bootstrap
