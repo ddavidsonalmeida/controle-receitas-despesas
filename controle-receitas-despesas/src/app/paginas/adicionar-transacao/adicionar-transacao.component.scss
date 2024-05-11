@@ -1,0 +1,91 @@
+@import '../../../styles.scss';
+
+.container{
+    display: flex;
+    width: 830px;
+    height: 650.79px;
+    gap: 150px;
+    margin-left: 110px;
+
+}
+
+.formulario{
+    margin-top: 80px;
+    margin-left: 220px;
+}
+.checkbox-botoes{
+    display: flex;
+    gap: 16px;
+    width: 312px;
+    height: 41px;
+    margin-bottom: 10px;
+    .bt-despesas{
+        width: 152px;
+        height: 41px;
+        color: $vermelho;
+        border-radius: 8px;
+        border: 1px solid $vermelho;
+    }
+    .bt-receitas{
+        width: 152px;
+        height: 41px;
+        color: $cinza-escuro;
+        border-radius: 8px;
+        border: 1px solid #959191;
+    }
+}
+
+.mb-3{
+    font-family: $fonte-padrao;
+    font-size: $font-pequena;
+    color: $cinza-escuro;
+    width: 399px;
+}
+
+.form-label{
+    height: 29px;
+}
+
+.form-control{
+    height: 53px;
+    width: 399px;
+    border-radius: 8px;
+}
+
+.botoes{
+    display: flex;
+    width: 399px;
+    height: 49px;
+    gap: 16px;
+    .botao-adicionar{
+        font-family: $fonte-padrao;
+        color: $branco;
+        background-color: $vermelho;
+        width: 242px;
+        height: 49px;
+        border-radius: 8px;
+        border-width: 0px;
+        padding: 16px 40px 16px 40px;
+        gap: 8px;
+        margin-top: 1em;
+    }
+    .botao-cancelar{
+        font-family: $fonte-padrao;
+        color: $cinza-escuro;
+        font-size: 14px;
+        background-color: $branco;
+        width: 141px;
+        height: 49px;
+        border: 1px solid $cinza-escuro;
+        border-radius: 8px;
+        border-width: 1px;
+        padding: 16px 40px 16px 40px;
+        gap: 8px;
+        margin-top: 1.2em;
+    }
+    img{
+        width: 667px;
+        height: 899px;
+        left: 699px;
+    }
+}
