@@ -1,0 +1,62 @@
+@import "./../../../styles.scss";
+@import "./../../app.component.scss";
+
+
+.container{
+    width: 920px;
+    height: 662px;
+    top: 103px;
+    left: 223px;
+    gap: 80px;
+    padding: 5%;
+    margin-left: 3%;
+}
+.cabecalho{
+    
+    display: flex;
+    justify-content: space-evenly;
+    width: 706px;
+    height: 101px;
+    gap: 48px;
+    font-size: $font-pequena;
+    h1 {
+        
+        font-size: $font-extra-grande;
+    }
+    p {
+        font-size: $font-pequena;
+    }
+
+}
+.orientacao {
+    display: flex;
+    justify-content: space-between;
+    width: 920px;
+    height: 37px;
+    gap: 48px;
+    
+}
+
+.ajuda {
+    width: 436px;
+    height: 39px;
+    padding-left: 75px;
+    p {
+        font-size: $font-pequena;
+    }
+    button {
+        padding: 16px, 40px, 16px, 40px;
+        width: 222px;
+        height: 49px;
+        border-radius: 8px;
+        background-color: $vermelho;
+        color: $branco;
+        line-height: 17px;
+
+    }
+}
+.card {
+    display: flex;
+    width: 920px;
+    height: 404px;
+}
