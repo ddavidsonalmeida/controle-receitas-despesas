@@ -103,19 +103,28 @@
                         border-radius: 12px;
                         gap: 10px;
                         background-color: $cinza-medio;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .imagem-rrelogio{
+                            background-image: url("./../../../assets/ImgExtrato/6c7ce0ec790187b76d07c99b10ee9c90.png");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            align-items: center;
+                        } 
 
 
                         td{
                             width: 583px;
                             height: 34px;
                             gap: 286px;
-                            background-color: $cinza-escuro;
                             font-family: $fonte-padrao;
                         
-                            .data-descrição{
+                            .data-descricao{
                                 display: flex;
                                 flex-direction: column;
-                                
+                                justify-content: space-between;
+                        
                                 .data{
                                     width: 72px;
                                     height: 15px;
@@ -132,9 +141,8 @@
                                     font-size: $font-pequena;
                                     line-height: 17,01;
                                     color: $preto;
-
-
                                 }
+
 
 
                             }
