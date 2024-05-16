@@ -2,25 +2,32 @@
 @import "./../../app.component.scss";
 
 .page {
+    
     .container {
         display: grid;
         grid-template-columns: 60% 40%;
         grid-template-rows: auto;
         grid-template-areas:
             "box-tabela sidebar";
+        
+        
+        
+       
 
         .box-tabela {
             display: flex;
             flex-direction: column;
             width: 631px;
             height: auto;
-            margin-top: 120px;
-            margin-left: 124px;
+            margin-top: 60px;
+            margin-left: 100px;
             gap: 28px;
+            
+            
 
             .titulo-botao {
                 width: 631px;
-                height: 49px;
+                height: auto;
                 gap: 41px;
                 display: flex;
                 justify-content: space-between;
@@ -60,8 +67,8 @@
             .menu-botoes {
                 display: flex;
                 gap: 12px;
-                width: 350px;
-                height: 41px;
+                width: 100%;
+                height: auto;
                 margin-bottom: 10px;
 
                 .bt-receita {
@@ -106,11 +113,11 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        .imagem-rrelogio{
-                            background-image: url("./../../../assets/ImgExtrato/6c7ce0ec790187b76d07c99b10ee9c90.png");
-                            background-repeat: no-repeat;
-                            background-size: contain;
+                        .imagem-relogio{
+                            
                             align-items: center;
+                            width: 24px;
+                            height: 24px;
                         } 
 
 
@@ -158,33 +165,35 @@
             }
         }
 
-    
-
-
         .sidebar {
-            width: 555px;
-            height: 100vh;
-            padding: 112px 45px 135px 48px;
-            margin-top: 8px;
+            width: 100%;
+            height: auto;
+            padding: 50px 45px 70px 20px;
+            margin-top: 7px;
+            margin-bottom: -8px;
             background-color: $cinza-claro;
-            gap: 10px;
-            margin-left: 330px;
+            gap: 2px;
+            margin-left: 120px;
+            
+            
 
             .container-sidebar {
                 display: flex;
                 flex-direction: column;
                 width: 287px;
-                height: 513px;
+                height: auto;
                 gap: 45px;
+                
 
                 .saldo-resultado{
-                    width: 168px;
-                    height: 80px;
-                    gap: 12px;
+                    width: 216px;
+                    height: auto;
+                    gap: 24px;
+                    
 
                     .saldo{
-                        width: 216px;
-                        height: 123px;
+                        width: 168px;
+                        height: 80px;
                         display: flex;
                         flex-direction: column;
 
@@ -205,75 +214,63 @@
                     
                     }
                     .resultado {
-                        width: 90px;
-                        height: 19px;
-                        border-radius: 24px;
-                        gap: 24px;
-                        // position: relative;
+                        gap: 36px;
                         display: flex;
-                        justify-content: space-between;
+                        align-items: center;
+                        margin: auto;
 
-                        .seta {
-                            color: $verde;
-                        }
-                        
-                        .valor3 {
+                        .treceita{
                             width: 90px;
-                            height: 19px;
-                            border-radius: 24px;
+                            height: auto;
                             gap: 4px;
-                            // position: absolute;
-                            // top: 50%;
-                            // left: 60px;
-                            // transform: translate(-50%, -50%);
-                            // font-size: 13px;
-                            // color: $verde;
-        
+                            display: flex;
+                            align-items: center;
+                            .seta{
+                                width: 90px;
+                                height: 19px;
+                            }
+                            .valor3{
+                                width: 90px;
+                                height: 19px;
+                                color: $verde;
+
+                            }
+                            
                         }
 
-                        // .cifrao {
-                        //     position: relative;
-                        //     display: inline-block;
-                        //     width: 20px;
-                        //     height: 20px;
-                        //     border: 2px solid $preto;
-                        //     border-radius: 50%;
-                        //     text-align: center;
-                        //     margin-left: 110px;
-                        //     top: -90%;
-                        //     font-size: 17px;
-        
-                        // }
-
-                        .valor4 {
+                        .tdespesa{
                             width: 90px;
-                            height: 19px;
-                            border-radius: 24px;
+                            height: auto;
                             gap: 4px;
-                            // position: absolute;
-                            // top: 50%;
-                            // left: 170px;
-                            // transform: translate(-50%, -50%);
-                            // font-size: 13px;
-        
+                            border-radius: 24px;
+                            display: flex;
+                            .cifrao{
+                                width: 90px;
+                                height: 19px;
+                            }
+                            .valor4{
+                                width: 90px;
+                                height: 19px;
+
+                            }
+                            
                         }
-        
-    
+
                     }
                 }                        
                      
-                .imagem-titulo{
-                    width: 288px;
-                    height: 300px;
+                .imagem-frase{
+                    width: 287px;
+                    height: auto;
                     display: flex;
                     flex-direction: column;
-                    
-
-
-                    .img{
+                    margin: auto;
+                                                           
+                    img{
                         width: 287px;
                         height: 171px;
                         border-radius: 12px;
+                       
                     }
                     .precisa-ajuda {
                         width: 249px;
@@ -281,7 +278,7 @@
                         font-family: $fonte-padrao;
                         font-size: 19px;
                         line-height: 23.09px;
-                        color: $cinza-escuro;
+                        margin: 20px 0 0px 0;
                         
                                                
                     }
@@ -300,6 +297,8 @@
                     border: 1px solid $vermelho;
                     cursor: pointer;
                     width: 290px;
+                    margin: auto;
+                    
                     
 
                 }
