@@ -21,10 +21,10 @@
                     <tr>
                     <div class="imagem-relogio"><img src="./../../../assets/ImgExtrato/relogio.png" alt="Imagem de circulo"></div>
                     <div class="data-descricao">
-                            <div class="data">13/04/2024</div>
+                            <div class="data">{{ date | data: 'dd/MM/yyyy' }}</div>
                             <div class="descricao">descrição</div>
                     </div> 
-                    <div class="valor">3960,00</div>
+                    <div class="valor">{{ salario | currency }}</div>
                     </tr>
                 </tbody>
             </table>
