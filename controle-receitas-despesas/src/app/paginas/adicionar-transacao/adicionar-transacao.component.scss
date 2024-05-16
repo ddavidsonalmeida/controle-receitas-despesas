@@ -2,16 +2,17 @@
 
 .container{
     display: flex;
-    width: 830px;
-    height: 650.79px;
-    gap: 150px;
+    width: 1030px;
+    height: 100vh;
+    gap: 130px;
     margin-left: 110px;
 
 }
 
 .formulario{
     margin-top: 80px;
-    margin-left: 220px;
+    margin-left: 400px;
+    margin-right: 180px;
 }
 .checkbox-botoes{
     display: flex;
@@ -51,6 +52,27 @@
     width: 399px;
     border-radius: 8px;
 }
+.categoria{
+    width: 359px;
+    height: 109px;
+    gap: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    .bt-categoria{
+        height: 33px;
+        width: auto;
+        border-radius: 24px;
+        border: 1px solid $cinza-escuro;
+        padding: 8px 14px 8px 14px;
+        gap: 4px;
+        align-items: center;
+        p{
+            width: 52px;
+            height: 17px;
+            font-size: fonte-pequena;
+        }
+    }
+}
 
 .botoes{
     display: flex;
@@ -85,7 +107,6 @@
     }
     img{
         width: 667px;
-        height: 899px;
-        left: 699px;
+        height: 100vh;
     }
 }

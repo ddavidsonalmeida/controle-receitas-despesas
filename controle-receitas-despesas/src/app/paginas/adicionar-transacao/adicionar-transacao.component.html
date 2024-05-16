@@ -2,22 +2,31 @@
 <div class="container">
     <form class="formulario">
         <h1>Nova Transação</h1>
-            <label for="tipo">Tipo</label>
+            <label for="tipo" class="mb-3">Tipo</label>
         <div class="checkbox-botoes">
             <button class="bt-despesas" type="radio" autocomplete="off" checked>Despesa</button>
             <button class="bt-receitas" type="radio" autocomplete="off">Receita</button>
         </div>
         <div class="mb-3">
-            <label for="cadastroNome" class="form-label">Tipo da Despesa/Receita</label>
-            <input type="text" class="form-control" id="cadastroNome" placeholder="Compras Drogasil">
+            <label for="descricao" class="form-label">Tipo da Despesa/Receita</label>
+            <input type="text" class="form-control" id="descricao" placeholder="Compras Drogasil">
         </div>
         <div class="mb-3">
-            <label for="cadastroTel" class="form-label">Valor</label>
-            <input type="number" class="form-control" id="cadastroTe=l" placeholder="R$ 100,00">
+            <label for="valor" class="form-label">Valor</label>
+            <input type="text" class="form-control" id="valor" placeholder="R$ 100,00" inputmode="decimal" prefix="R$ " mask="separator.2" thousandSeparator=".">
         </div>
         <div class="mb-3">
-            <label for="cadastroSalario" class="form-label">Data</label>
-            <input type="date" class="form-control" id="cadastroSalario" placeholder="Insira seu salário aqui">
+            <label for="data" class="form-label">Data</label>
+            <input type="date" class="form-control" id="data">
+        </div>
+        <label for="categoria" class="mb-3">Categoria</label>
+        <div class="categoria">
+            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"checked><img src="./../../../assets/imagens/icon-saude.png">Saúde</button>
+            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"><img src="./../../../assets/imagens/icon-lazer.png">Lazer</button>
+            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"><img src="./../../../assets/imagens/icon-alimentacao.png">Alimentação</button>
+            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"><img src="./../../../assets/imagens/icon-roupas.png">Roupas</button>
+            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"><img src="./../../../assets/imagens/icon-moradia.png">Moradia</button>
+            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"><img src="./../../../assets/imagens/icon-outros.png">Outros</button>
         </div>
         <div class="botoes">
             <button class="botao-adicionar">Adicionar</button>
