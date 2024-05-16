@@ -80,6 +80,13 @@
                 height: 120px;
                 border-radius: 12px;
             }
+            .card-body{
+                display: flex;
+                justify-content: center;
+                border: 1px solid $cinza-medio;
+                width: 290px;
+                text-align: center;
+            }
         }
     }
 }
