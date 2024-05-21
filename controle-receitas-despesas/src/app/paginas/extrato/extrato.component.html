@@ -5,27 +5,46 @@
                 <div class="titulo-minhas-transacoes">
                     <h1>Minhas transações</h1>
                 </div>
-                <button class="botao-nova-trasacao">
+                <button class="botao-nova-trasacao" routerLink="/adicionar-transacao">
                     <p>Nova Transação</p>
                 </button>
             </div>
 
             <div class="menu-botoes">
-                <button class="bt-receita" type="radio" autocomplete="off" checked>Receita</button>
-                <button class="bt-despesa" type="radio" autocomplete="off">Despesa</button>
-                <button class="bt-agendado" type="radio" autocomplete="off">Agendado</button>
+                <span *ngIf="">
+                    <button class="bt-receita" type="button" (click) = "selecionar ('receita')" [class.selected]="selecionado==='receita' ">Receita</button>
+                </span>
+                <span>
+                    <button class="bt-despesa" type="button" (click) = "selecionar ('despesa')" [class.selected]="selecionado==='despesa' ">Despesa</button>
+                </span>
+                
             </div>
 
             <table class="table">
                <tbody>
-                    <tr>
+                <tr *ngFor= "let transacao of transacoes">
+                    <td>
+                        <span *ngIf="transacao.tipo === 'despesa'"> <img src="./../../../assets/ImgExtrato/setaVermelhabaixo.png" alt="imagem seta vermelha indicando despesa"> </span>
+                        <span *ngIf="transacao.tipo === 'receita'"> <img src="./../../../assets/ImgExtrato/cifraoVermelho.png" alt="imagem cifrão vermelha indicando receita"> </span>
+                        
+                    </td>
+                    <td>{{transacao.data}} {{transacao.descricao}}</td>
+                    <td>{{transacao.valor | currency:'BRL'}}</td>
+
+                </tr>
+
+
+
+                    <!-- <tr>
                     <div class="imagem-relogio"><img src="./../../../assets/ImgExtrato/relogio.png" alt="Imagem de circulo"></div>
                     <div class="data-descricao">
                             <div class="data">{{ date | data: 'dd/MM/yyyy' }}</div>
                             <div class="descricao">descrição</div>
                     </div> 
                     <div class="valor">{{ salario | currency }}</div>
-                    </tr>
+                    </tr> -->
+
+                    <!-- <img src="./../../../assets/ImgExtrato/relogio.png" alt="Imagem de circulo"> -->
                 </tbody>
             </table>
         </div>
@@ -35,13 +54,16 @@
                 <div class="saldo-resultado">
                     <div class="saldo">
                         <p>Saldo Atual</p>
-                        <p class="valor">R$860,00</p>
+                        <!-- <p class="valor" [ngStyle]="{'color': transacao.tipo === 'despesa' ? 'red' : 'green'}">{{saldo()}}</p> -->
+                        <p class="valor" [ngStyle]="{'color': saldo()<0 ? 'red' : 'green'}">{{saldo()}}</p>
+
                     </div>
+
 
                     <div class="resultado">
                         <div class="treceita">
                             <div class="seta"><img src="./../../../assets/ImgExtrato/setaVerde.png" alt="seta com circulo verde"></div>
-                            <div class="valor3">R$1860,00</div>
+                            <div class="valor3">350,00</div>
                         </div>
 
                         <div class="tdespesa">
@@ -57,7 +79,8 @@
                         <p>Precisa de ajuda <br/> com suas finanças?</p>
                     </div>
                 </div>                
-                <button class="botao-investimentos"> Dicas e Investimentos <img src="./../../../assets/ImgExtrato/setadeSaida.png" alt="Seta de saida"></button>
+                <!-- <button class="botao-investimentos" routerLink="" >  <img src="./../../../assets/ImgExtrato/setadeSaida.png" alt="Seta de saida"></button> -->
+                <!-- <button (click)="verificarSaldoDicas()"></button> -->
             </div>
         </div>
     </div>
