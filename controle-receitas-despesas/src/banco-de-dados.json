@@ -1,0 +1,28 @@
+{
+    "Lista-de-transacoes": [
+        {
+            "id": 1,
+            "descricao": "Salário",
+            "tipo": "despesa",
+            "valor": 3000.00,
+            "data": "2022-01-01"
+        },
+
+        {
+            "id": 2,
+            "descricao": "Salário",
+            "tipo": "despesa",
+            "valor": 3000.00,
+            "data": "2022-01-01"
+
+        },
+
+        {
+            "id": 3,
+            "descricao": "Salário",
+            "tipo": "despesa",
+            "valor": 3000.00,
+            "data": "2022-01-01"
+        }
+    ]
+}
