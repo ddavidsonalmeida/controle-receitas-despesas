@@ -5,7 +5,7 @@
             "tipo": "receita",
             "descricao": "Recebimento de Salário",
             "valor": 8000,
-            "data": "2024-05-01 10:00:00"
+            "data": "2024-05-01"
           },
       
           {
@@ -13,7 +13,7 @@
             "tipo": "despesa",
             "descricao": "aluguel",
             "valor": 3000,
-            "data": "2024-05-01 10:00:00"
+            "data": "2024-05-01"
           },
       
           {
@@ -21,7 +21,7 @@
             "tipo": "despesa",
             "descricao": "luz",
             "valor": 150,
-            "data": "2024-05-01 10:00:00"
+            "data": "2024-05-01"
           },
       
           {
@@ -29,7 +29,7 @@
             "tipo": "despesa",
             "descricao": "internet",
             "valor": 140,
-            "data": "2024-05-01 10:00:00"
+            "data": "2024-05-01"
           },
 
           {
@@ -37,7 +37,7 @@
             "tipo": "receita",
             "descricao": "bonus",
             "valor": 5000,
-            "data": "2024-05-01 10:00:00"
+            "data": "2024-05-01"
           }
         
       

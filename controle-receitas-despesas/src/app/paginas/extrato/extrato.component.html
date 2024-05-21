@@ -28,7 +28,10 @@
                         <span *ngIf="transacao.tipo === 'receita'"> <img src="./../../../assets/ImgExtrato/cifraoVermelho.png" alt="imagem cifrão vermelha indicando receita"> </span>
                         
                     </td>
-                    <td>{{transacao.data}} {{transacao.descricao}}</td>
+                    <td class="data-descricao">
+                        <div class="data">{{transacao.data}}</div> 
+                        <div class="descricao">{{transacao.descricao}}</div>
+                    </td>
                     <td>{{transacao.valor | currency:'BRL'}}</td>
 
                 </tr>

@@ -1,8 +1,11 @@
+
 import { Component, OnInit } from '@angular/core';
 import { NgStyle, NgIf, NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-import { TransacaoService }  from '../../transacoes.service';
+import { TransacoesService } from '../../transacoes.service';
+import { Transacao } from './../../transacoes';
+
 
 
 
@@ -24,13 +27,16 @@ export class ExtratoComponent implements OnInit {
 
   transacoes: Transacao[] = [];
 
-  constructor(private transacaoService: TransacaoService) {}
+  constructor(private TransacoesService:TransacoesService) {}
 
   ngOnInit(): void {
     this.getTransacoes();
   }
 
   getTransacoes(): void {
+    this.TransacoesService.getTransacoes()
+    .subscribe(transacoes => this.transacoes = transacoes);
+
     
   }
 
@@ -55,40 +61,7 @@ export class ExtratoComponent implements OnInit {
   
 
 
-  public transacoes = [
-    // {
-    //   'id': 1,
-    //   'tipo': 'receita',
-    //   'descricao': 'Recebimento de Salário',
-    //   'valor': 8000,
-    //   'data': "2024-05-01"
-    // },
-
-    // {
-    //   'id': 2,
-    //   'tipo': 'despesa',
-    //   'descricao': 'pagamento de aluguel',
-    //   'valor': 5000,
-    //   'data': "2024-05-01"
-    // },
-
-    // {
-    //   'id': 3,
-    //   'tipo': 'despesa',
-    //   'descricao': 'Conta de luz',
-    //   'valor': 150,
-    //   'data': "2024-01-01"
-    // },
-
-    // {
-    //   'id': 4,
-    //   'tipo': 'despesa',
-    //   'descricao': 'Conta de luz',
-    //   'valor': 150,
-    //   'data': "2024-01-01"
-    // }
-
-  ]
+ 
 
   selecionado: string='receita';
   
