@@ -1,0 +1,46 @@
+{
+    "lista-transacoes": [
+        {
+            "id": 1584811,
+            "tipo": "receita",
+            "descricao": "Recebimento de Salário",
+            "valor": 8000,
+            "data": "2024-05-01"
+          },
+      
+          {
+            "id": 1840611,
+            "tipo": "despesa",
+            "descricao": "aluguel",
+            "valor": 3000,
+            "data": "2024-05-01"
+          },
+      
+          {
+            "id": 184154815,
+            "tipo": "despesa",
+            "descricao": "luz",
+            "valor": 150,
+            "data": "2024-05-01"
+          },
+      
+          {
+            "id": 184150511,
+            "tipo": "despesa",
+            "descricao": "internet",
+            "valor": 140,
+            "data": "2024-05-01"
+          },
+
+          {
+            "id": 14879816,
+            "tipo": "receita",
+            "descricao": "bonus",
+            "valor": 5000,
+            "data": "2024-05-01"
+          }
+        
+      
+        
+    ]
+}

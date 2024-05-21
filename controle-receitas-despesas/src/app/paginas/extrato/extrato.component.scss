@@ -113,7 +113,7 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        .imagem-relogio{
+                        img{
                             
                             align-items: center;
                             width: 24px;
@@ -133,12 +133,12 @@
                                 justify-content: space-between;
                         
                                 .data{
-                                    width: 72px;
+                                    width: 130px;
                                     height: 15px;
                                     font-family: $fonte-padrao;
-                                    font-size: 12px;
+                                    font-size: 8px;
                                     line-height: 14,58px;
-                                    color: #848484;
+                                    color: $cinza-claro;
                                 }
 
                                 .descricao{
