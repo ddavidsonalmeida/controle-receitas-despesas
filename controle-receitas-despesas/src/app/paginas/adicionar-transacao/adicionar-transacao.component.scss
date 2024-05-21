@@ -9,9 +9,24 @@
 }
 
 .formulario{
+    .bt-voltar{
+        text-decoration: none;
+        width: 89px;
+        height: 19px;
+        font-family: $fonte-padrao;
+        font-size: $font-media;
+        line-height: 19.45px;
+        color: $vermelho;
+        border: none;
+        background: none;
+
+    }
     margin-top: 80px;
     margin-left: 400px;
     margin-right: 180px;
+    input{
+        padding-left: 12px;
+    }
 }
 .checkbox-botoes{
     display: flex;
