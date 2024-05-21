@@ -1,0 +1,43 @@
+{
+    "cliente": {
+        "id": 1,
+        "nome": "João",
+        "email": "XGK9s@example.com",
+        "telefone": 123456789,
+        "salario": 5000
+    },
+    "transacoes": [
+        {
+            "id": 1,
+            "descricao": "Salário",
+            "tipo": "receita",
+            "categoria": "outros",
+            "valor": 8000.00,
+            "data": "2022-01-01"
+        },
+        {
+            "id": 2,
+            "descricao": "Aluguel",
+            "tipo": "despesa",
+            "categoria": "moradia",
+            "valor": 2000.00,
+            "data": "2022-01-01"
+        },
+        {
+            "id": 3,
+            "descricao": "Farmácia",
+            "tipo": "despesa",
+            "categoria": "saúde",
+            "valor": 125.92,
+            "data": "2022-01-01"
+        },
+        {
+            "id": 4,
+            "descricao": "Supermercado",
+            "tipo": "despesa",
+            "categoria": "alimentação",
+            "valor": 327.85,
+            "data": "2022-01-01"
+        }
+    ]
+}
