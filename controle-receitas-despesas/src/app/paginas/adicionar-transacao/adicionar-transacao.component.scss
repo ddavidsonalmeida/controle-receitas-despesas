@@ -28,27 +28,40 @@
         padding-left: 12px;
     }
 }
-.checkbox-botoes{
+.checkbox-botoes {
     display: flex;
     gap: 16px;
     width: 312px;
     height: 41px;
     margin-bottom: 10px;
-    .bt-despesas{
-        width: 152px;
-        height: 41px;
-        color: $vermelho;
-        border-radius: 8px;
-        border: 1px solid $vermelho;
-    }
-    .bt-receitas{
-        width: 152px;
-        height: 41px;
-        color: $cinza-escuro;
-        border-radius: 8px;
-        border: 1px solid #959191;
-    }
 }
+
+.bt-despesas {
+    width: 152px;
+    height: 41px;
+    color: $cinza-escuro;
+    border-radius: 8px;
+    border: 1px solid #959191;
+}
+
+.bt-receitas {
+    width: 152px;
+    height: 41px;
+    color: $cinza-escuro;
+    border-radius: 8px;
+    border: 1px solid #959191;
+}
+
+.bt-despesas:hover {
+    color: $vermelho; 
+    border-color: $vermelho; 
+}
+
+.bt-receitas:hover {
+    color: $verde; 
+    border-color: $verde; 
+}
+
 
 .mb-3{
     font-family: $fonte-padrao;
@@ -72,7 +85,7 @@
     gap: 14px;
     display: flex;
     flex-wrap: wrap;
-    .bt-categoria{
+    .bt-categoria {
         height: 33px;
         width: auto;
         border-radius: 24px;
@@ -80,13 +93,17 @@
         padding: 8px 14px 8px 14px;
         gap: 4px;
         align-items: center;
-        p{
-            width: 52px;
-            height: 17px;
-            font-size: fonte-pequena;
-        }
+        position: relative;
+        overflow: hidden;
+        color: black; 
     }
-}
+    
+    .bt-categoria:hover,
+    .bt-categoria:active {
+        color: $vermelho;
+        border-color: $vermelho; 
+    }
+    }
 .botoes{
     display: flex;
     width: 399px;
