@@ -120,13 +120,36 @@
 }
 
 .jmodal {
+
   width: 60%;
   height: 400px;
-  min-height: 200px;
+  min-height: 400px;
   background-color: rgba(255, 255, 255, 0.607);
   backdrop-filter: blur(10px);
   padding: 50px;
   border-radius: 20px;
+
+  .titulo{
+    width: 709px;
+    height: 78px;
+    font-family: verdana;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: height 38.89px;
+  }
+  .card-img-top{
+    width: 709px;
+    height: 159px;
+    }
+    .texto{
+      width: 709px;
+      height: 133px;
+      font-family: verdana;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19.45px;
+    }
+
 }
 
 .fechar {
@@ -136,7 +159,6 @@
   right: 10px;
   width: 30px;
   height: 30px;
-
   color: red;
   font-size: 20px;
   cursor: pointer;
@@ -144,4 +166,4 @@
 
 .janela-modal.abrir{
   display: flex;
-}
+  }
