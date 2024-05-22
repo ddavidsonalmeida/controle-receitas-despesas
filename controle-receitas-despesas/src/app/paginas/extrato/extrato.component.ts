@@ -6,9 +6,6 @@ import { RouterLink } from '@angular/router';
 import { TransacoesService } from '../../transacoes.service';
 import { Transacao } from './../../transacoes';
 
-
-
-
 import { CurrencyPipe } from '@angular/common';
 import { DataPipe } from '../../data.pipe';
 import { DicasInvestimentosComponent } from '../dicas-investimentos/dicas-investimentos.component';
