@@ -19,57 +19,42 @@
       </div>
     </div>
 
+    <!-- GRID -->
+
     <div class="container-grid">
       <div class="row">
 
-        <div class="col">
-          <div class="card">
-            <img src="./../../../assets/imagens/touro-merc-financeiro.png" class="card-img-top"
-              alt="imagem do Touro do mercado finaceiro">
-            <p class="card-text">Glossário definitivo do mercado financeiro: entenda os termos.</p>
-          </div>
-        </div>
+        <!-- CARD -->
 
+        @for (item of listaDeCard; track $index) {
         <div class="col">
-          <div class="card">
-            <img src="./../../../assets/imagens/como-trabalhar-na-bolsa.png" class="card-img-top"
-              alt="imagem de uma mulher trabalhando na bolsa de valores pelo computador">
-            <p class="card-text">Como trabalhar na bolsa de valores? Quanto ganha?</p>
-          </div>
+          <button (click)="abrirModal(item)" class="card1">
+            <div class="card">
+              <img src="{{item.imagem}}" class="card-img-top" alt="imagem do Touro do mercado finaceiro">
+              <p class="card-text">{{item.titulo}}</p>
+            </div>
+          </button>
         </div>
-
-        <div class="col">
-          <div class="card">
-            <img src="./../../../assets/imagens/aprenda-a-diferenca.png" class="card-img-top"
-              alt="imagem de um espaço de trabalho / ecritório">
-            <p class="card-text">Aprenda a diferença entre assessor e consultor de inves...</p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card">
-            <img src="./../../../assets/imagens/o-que-e-cpa-10.png" class="card-img-top"
-              alt="imagem de uma mulher estudando CPA 10 pelo notebook">
-            <p class="card-text">O que é CPA 10? Tudo sobre essa certificação</p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card">
-            <img src="./../../../assets/imagens/melhor-forma-de-investir.png" class="card-img-top"
-              alt="imagem de uma cart. de trabalho junto a cédulas e moedas">
-            <p class="card-text">Melhores formas de investir o seu 13º salário.</p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card">
-            <img src="./../../../assets/imagens/como-investir-em-cdb.png" class="card-img-top"
-              alt="imagem de gráficos de investimentos em CDB feitos pelo celular">
-            <p class="card-text">Como investir em CDB? Tudo o que você precisa saber sobre...</p>
-          </div>
-        </div>
+        }
       </div>
     </div>
   </div>
 </div>
+
+<!-- MODAL -->
+
+@if (openmodal) {
+<div class="janela-modal" id="janela-modal">
+  <div class="jmodal">
+    <button (click)="fecharModal()" class="fechar">voltar</button>
+    <h1>{{detalheModal.titulo}}</h1>
+    <img src="{{detalheModal.imagem}}" class="card-img-top" alt="imagem do Touro do mercado finaceiro">
+    <p>{{detalheModal.texto}}</p>
+  </div>
+</div>
+}
+
+
+
+
+

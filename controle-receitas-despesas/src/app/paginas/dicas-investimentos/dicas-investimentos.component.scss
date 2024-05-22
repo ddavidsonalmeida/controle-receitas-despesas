@@ -35,18 +35,21 @@
   width: 920px;
   height: 37px;
   gap: 48px;
-  .fonte-dicas{
-    color:$vermelho;
+  .fonte-dicas {
+    color: $vermelho;
   }
-  .indicador-pag-dicas{
-
-    background-color: $vermelho; width: 436px; height: 4px
+  .indicador-pag-dicas {
+    background-color: $vermelho;
+    width: 436px;
+    height: 4px;
   }
-  .fonte-invest{
+  .fonte-invest {
     color: rgb(158, 157, 157);
   }
-  .indicador-pag-invest{
-    background-color: rgb(158, 157, 157); width: 436px; height: 4px
+  .indicador-pag-invest {
+    background-color: rgb(158, 157, 157);
+    width: 436px;
+    height: 4px;
   }
 }
 
@@ -79,6 +82,10 @@
   margin-left: 7px;
 
   .col {
+    .card1 {
+      text-decoration: none;
+      border: none;
+    }
     .card {
       width: 290px;
       height: 190px;
@@ -88,7 +95,7 @@
         height: 120px;
         border-radius: 12px;
       }
-      .card-text{
+      .card-text {
         padding: 5px 2px;
         font-family: verdana;
         font-weight: 400;
@@ -97,4 +104,44 @@
       }
     }
   }
+}
+
+.janela-modal {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.jmodal {
+  width: 60%;
+  height: 400px;
+  min-height: 200px;
+  background-color: rgba(255, 255, 255, 0.607);
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.fechar {
+  border: none;
+  background-color: transparent;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.janela-modal.abrir{
+  display: flex;
 }
