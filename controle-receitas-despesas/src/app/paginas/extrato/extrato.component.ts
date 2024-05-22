@@ -4,9 +4,6 @@ import { NgStyle, NgIf, NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 import { TransacoesService } from '../../transacoes.service';
-import { Transacao } from './../../transacoes';
-
-
 
 
 import { CurrencyPipe } from '@angular/common';
@@ -19,78 +16,80 @@ import { DicasRegularizacaoComponent } from '../dicas-regularizacao/dicas-regula
 @Component({
   selector: 'app-extrato',
   standalone: true,
-  imports: [CurrencyPipe, DataPipe, NgStyle, NgIf, NgFor, RouterLink, DicasInvestimentosComponent, DicasRegularizacaoComponent],
+  imports: [CurrencyPipe, DataPipe, NgStyle, NgIf, NgFor, RouterLink, DicasInvestimentosComponent, DicasRegularizacaoComponent,],
   templateUrl: './extrato.component.html',
   styleUrl: './extrato.component.scss'
 })
 export class ExtratoComponent implements OnInit {
+  public date = new Date();
+  salario: number = 12000;
+  receitas: number = 6000;
+  despesas: number = 3000;
+  transacoes: any[] = [];
+  transacoesFiltradas: any[] = [];
+  tipoSelecionado: string = '';
 
-  transacoes: Transacao[] = [];
+  // transacoes: Transacao[] = [];
 
-  constructor(private TransacoesService:TransacoesService) {}
+  constructor(private TransacoesService: TransacoesService) { }
 
   ngOnInit(): void {
     this.getTransacoes();
+
   }
 
   getTransacoes(): void {
     this.TransacoesService.getTransacoes()
-    .subscribe(transacoes => this.transacoes = transacoes);
+      .subscribe(transacoes => this.transacoes = transacoes);
 
-    
+
   }
 
 
-  public date = new Date();
+  // constructor(){}
 
-  public salario = 12000;
-
-
-
-  public receitas = 6000;
-  public despesas = 3000;
-
-  public saldo() {
-    return this.receitas - this.despesas
+  saldo() {
+    return this.receitas - this.despesas;
   }
 
-  public treceitas = 6000;
+  treceitas: number = 6000;
 
-  public tdespesas = 3500;
+  tdespesas: number = 3500;
 
-  
+//Esta funcão deveria calcular o valor e devidir se levara para a tela de investimento ou para a tela de regularização, mas esta com erro que não identifiquei
 
-
- 
-
-  selecionado: string='receita';
-  
-  selecionar(tipo: string){
-    this.selecionado = tipo;
-  }
-  
-}
-
-
-
-  //aqui a regra é que para o botao ser ativado no caso de regularização o saldo devera ser 2 vezes menor que o salario
-  // e para ativar para investimento o saldo devera ser 3 vezes mais que o salario
-  // constructor(private router: Router) { }
- 
-
-  // verificarSaldoDicas() {
-  //   if (this.saldo > = 3 * this.salario) {
-  //     this.router.navigate(['/dicas-investimentos']);
-  //   }else if ([this.saldo <= this.salario * (-2)]) {
-  //     this.router.navigate(['/dicas-regularizacao']);
+  // ObterRotaComBaseNoSaldo(): { rota: string, texto: string } {
+  //   if (this.saldo < this.salario * 0.5) {
+  //     return { rota: '/dicas-regularizacao', texto: 'Regularização' };
+  //   } else if (this.saldo >= this.salario * 3) {
+  //     return { rota: '/dicas-investimentos', texto: 'Investimentos' };
+  //   } else {
+  //     return { rota: '', texto: 'Botão Desabilitado' };
   //   }
   // }
 
-  //aqui a regra é aquela questão de somar as receitas que irão aparecer abaixo do saldo, fiz um rascunho mas esta dando erros.
 
-  // getSaldoAtual(): number {
-  //   return this.transacoes.reduce((saldo, transacao) => {
-  //     return transacao.tipo === 'receita' ? saldo + transacao.value : saldo - transacao.value;
-  //   },0);
-  // }
+  carregarTransacoes(): void {
+
+    this.TransacoesService.getTransacoes().subscribe((data: any[]) => {
+      this.transacoes = data;
+      this.transacoesFiltradas = this.transacoes;
+    });
+  }
+
+  selecionarTipo(tipo: string): void {
+
+    if (this.tipoSelecionado === tipo) {
+      this.tipoSelecionado = '';
+      this.transacoesFiltradas = this.transacoes;
+    } else {
+      this.tipoSelecionado = tipo;
+      this.transacoesFiltradas = this.transacoes.filter(transacao => transacao.tipo === tipo);
+    }
+
+
+
+  }
+}
+  
 

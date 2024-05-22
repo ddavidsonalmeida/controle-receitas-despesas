@@ -71,7 +71,7 @@
                 height: auto;
                 margin-bottom: 10px;
 
-                .bt-receita {
+                .ativo {
                     width: 100px;
                     height: 41px;
                     color: $cinza-escuro;
@@ -80,23 +80,16 @@
                     background-color: $branco;
                 }
 
-                .bt-despesa {
-                    width: 100px;
-                    height: 41px;
-                    color: $cinza-escuro;
-                    border-radius: 24px;
-                    border: 1px solid $cinza-escuro;
-                    background-color: $branco;
-                }
+                // .bt-despesa {
+                //     width: 100px;
+                //     height: 41px;
+                //     color: $cinza-escuro;
+                //     border-radius: 24px;
+                //     border: 1px solid $cinza-escuro;
+                //     background-color: $branco;
+                // }
 
-                .bt-agendado {
-                    width: 100px;
-                    height: 41px;
-                    color: $cinza-escuro;
-                    border-radius: 24px;
-                    border: 1px solid $cinza-escuro;
-                    background-color: $branco;
-                }
+                
 
             
             }

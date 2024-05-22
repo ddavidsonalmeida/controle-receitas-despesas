@@ -7,13 +7,11 @@ import { Transacao } from './transacoes';
 @Injectable({
   providedIn: 'root'
 })
-export class TransacoesService {
-  private baseUrl = 'http://localhost:3000/lista-transacoes';
+export class LancamentoReceitaDespesaService {
 
+  private baseUrl = 'http://localhost:3000/lista-transacoes';
+  
   constructor(private http: HttpClient) { }
-  getTransacoes(): Observable<Transacao[]>{
-    return this.http.get<Transacao[]>(this.baseUrl);
-  }
 
   getReceitas(): Observable<any>{
     return this.http.get(`${this.baseUrl}/receitas`);
@@ -22,4 +20,5 @@ export class TransacoesService {
   getDespesas(): Observable<any>{
     return this.http.get(`${this.baseUrl}/despesas`);
   }
+
 }
