@@ -117,10 +117,11 @@
   align-items: center;
   justify-content: center;
   z-index: 999;
+
 }
 
-.jmodal {
 
+.jmodal {
   width: 60%;
   height: 400px;
   min-height: 400px;
@@ -128,6 +129,7 @@
   backdrop-filter: blur(10px);
   padding: 50px;
   border-radius: 20px;
+
 
   .titulo{
     width: 709px;
@@ -140,7 +142,7 @@
   .card-img-top{
     width: 709px;
     height: 159px;
-    }
+      }
     .texto{
       width: 709px;
       height: 133px;
@@ -164,6 +166,3 @@
   cursor: pointer;
 }
 
-.janela-modal.abrir{
-  display: flex;
-  }
