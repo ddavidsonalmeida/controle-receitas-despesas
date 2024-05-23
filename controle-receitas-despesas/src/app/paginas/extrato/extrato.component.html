@@ -11,43 +11,39 @@
             </div>
 
             <div class="menu-botoes">
-                <span *ngIf="">
-                    <button class="bt-receita" type="button" (click) = "selecionar ('receita')" [class.selected]="selecionado==='receita' ">Receita</button>
-                </span>
-                <span>
-                    <button class="bt-despesa" type="button" (click) = "selecionar ('despesa')" [class.selected]="selecionado==='despesa' ">Despesa</button>
-                </span>
+                <button (click)="selecionarTipo('receita')" [class.ativo]="tipoSelecionado ==='receita'">Receita</button>
+
+                <!-- este botao esta com erro -->
+                <!-- <button (click)="selecionartipo('despesa')" [class.ativo]="tipoSelecionado ==='despesa'">Despesa</button> -->
                 
             </div>
 
+            <!-- <div class="menu-botoes">
+                <span *ngIf="mostrarElemento">
+                    <button class="bt-receita" type="button" (click) = "selecionar ('receita')" [class.selected]="selecionado==='receita' ">Receita</button>
+                </span>
+
+                <span *ngIf="mostrarElemento">
+                    <button class="bt-despesa" type="button" (click) = "selecionar ('despesa')" [class.selected]="selecionado==='despesa' ">Despesa</button>
+                </span>
+                
+            </div> -->
+
             <table class="table">
                <tbody>
-                <tr *ngFor= "let transacao of transacoes">
-                    <td>
-                        <span *ngIf="transacao.tipo === 'despesa'"> <img src="./../../../assets/ImgExtrato/setaVermelhabaixo.png" alt="imagem seta vermelha indicando despesa"> </span>
-                        <span *ngIf="transacao.tipo === 'receita'"> <img src="./../../../assets/ImgExtrato/cifraoVermelho.png" alt="imagem cifrão vermelha indicando receita"> </span>
-                        
-                    </td>
-                    <td class="data-descricao">
-                        <div class="data">{{transacao.data}}</div> 
-                        <div class="descricao">{{transacao.descricao}}</div>
-                    </td>
-                    <td>{{transacao.valor | currency:'BRL'}}</td>
+                    <tr *ngFor= "let transacao of transacoesFiltradas">
+                        <td>
+                            <span *ngIf="transacao.tipo === 'despesa'"> <img src="./../../../assets/ImgExtrato/setaVermelhabaixo.png" alt="imagem seta vermelha indicando despesa"> </span>
+                            <span *ngIf="transacao.tipo === 'receita'"> <img src="./../../../assets/ImgExtrato/cifraoVermelho.png" alt="imagem cifrão vermelha indicando receita"> </span>
+                            
+                        </td>
+                        <td class="data-descricao">
+                            <div class="data">{{transacao.data}}</div> 
+                            <div class="descricao">{{transacao.descricao}}</div>
+                        </td>
+                        <td>{{transacao.valor | currency:'BRL'}}</td>
 
-                </tr>
-
-
-
-                    <!-- <tr>
-                    <div class="imagem-relogio"><img src="./../../../assets/ImgExtrato/relogio.png" alt="Imagem de circulo"></div>
-                    <div class="data-descricao">
-                            <div class="data">{{ date | data: 'dd/MM/yyyy' }}</div>
-                            <div class="descricao">descrição</div>
-                    </div> 
-                    <div class="valor">{{ salario | currency }}</div>
-                    </tr> -->
-
-                    <!-- <img src="./../../../assets/ImgExtrato/relogio.png" alt="Imagem de circulo"> -->
+                    </tr>
                 </tbody>
             </table>
         </div>
