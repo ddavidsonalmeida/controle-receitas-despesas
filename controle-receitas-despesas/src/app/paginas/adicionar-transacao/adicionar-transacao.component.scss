@@ -36,31 +36,33 @@
     margin-bottom: 10px;
 }
 
-.bt-despesas {
+.btn-despesas {
     width: 152px;
     height: 41px;
     color: $cinza-escuro;
     border-radius: 8px;
     border: 1px solid #959191;
+    :hover {
+        color: $vermelho; 
+        border-color: $vermelho; 
+    }
 }
 
-.bt-receitas {
+.btn-receitas {
     width: 152px;
     height: 41px;
     color: $cinza-escuro;
     border-radius: 8px;
     border: 1px solid #959191;
+    :hover {
+        color: $verde; 
+        border-color: $verde; 
+    }
 }
 
-.bt-despesas:hover {
-    color: $vermelho; 
-    border-color: $vermelho; 
-}
 
-.bt-receitas:hover {
-    color: $verde; 
-    border-color: $verde; 
-}
+
+
 
 
 .mb-3{

@@ -21,10 +21,10 @@ export class TransacoesService {
   }
 
   getReceitas(): Observable<any>{
-    return this.http.get(`${this.baseUrl}/receitas`);
+    return this.http.get(`${this.url}/receitas`);
   }
 
   getDespesas(): Observable<any>{
-    return this.http.get(`${this.baseUrl}/despesas`);
+    return this.http.get(`${this.url}/despesas`);
   }
 }

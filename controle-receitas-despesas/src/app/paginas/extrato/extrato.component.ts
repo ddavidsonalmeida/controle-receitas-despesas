@@ -4,11 +4,7 @@ import { NgStyle, NgIf, NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 import { TransacoesService } from '../../transacoes.service';
-<<<<<<< HEAD
 import { Transacao } from './../../transacoes';
-=======
-
->>>>>>> Logica-cadastro-cliente
 
 import { CurrencyPipe } from '@angular/common';
 import { DataPipe } from '../../data.pipe';
