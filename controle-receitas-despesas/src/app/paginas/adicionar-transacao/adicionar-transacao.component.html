@@ -8,16 +8,12 @@
             <div  class="checkbox-botoes" role="group" aria-label="Basic radio toggle button group">
                 
                 <input  type="radio" class="btn-check btn-despesas" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                <label  class="btn btn-outline-primary btn-despesas" for="btnradio1">Despesas</label>
+                <label  class="btn btn-outline-danger btn-despesas" for="btnradio1">Despesas</label>
               
                 <input type="radio" class="btn-check btn-receitas" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-primary btn-receitas" for="btnradio2">Receitas</label>
+                <label class="btn btn-outline-success btn-receitas" for="btnradio2">Receitas</label>
               </div>
 
-        <!-- <div class="checkbox-botoes">
-            <button class="bt-despesas" type="radio" autocomplete="off" data-bs-toggle="button" checked>Despesa</button>
-            <button class="bt-receitas" type="radio" autocomplete="off">Receita</button>
-        </div> -->
         <div class="mb-3">
             <label for="descricao" class="form-label">Tipo da Despesa/Receita</label>
             <input type="text" class="form-control" id="descricao" placeholder="Compras Drogasil">
@@ -32,12 +28,23 @@
         </div>
         <label for="categoria" class="mb-3">Categoria</label>
         <div class="categoria">
-            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"checked><img src="./../../../assets/imagens/icon-saude.png">Saúde</button>
-            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"><img src="./../../../assets/imagens/icon-lazer.png">Lazer</button>
-            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"><img src="./../../../assets/imagens/icon-alimentacao.png">Alimentação</button>
-            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"><img src="./../../../assets/imagens/icon-roupas.png">Roupas</button>
-            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"><img src="./../../../assets/imagens/icon-moradia.png">Moradia</button>
-            <button class="bt-categoria" type="radio" autocomplete="off" name="cat-btn"><img src="./../../../assets/imagens/icon-outros.png">Outros</button>
+                <input type="radio" class="btn-check btn-receitas" name="btnradio" id="btnradio3" autocomplete="off">
+                <label class="btn btn-outline-primary bt-categoria" for="btnradio3"><img src="./../../../assets/imagens/icon-saude.png" alt="">Saúde</label>
+
+                <input type="radio" class="btn-check btn-receitas" name="btnradio" id="btnradio4" autocomplete="off">
+                <label class="btn btn-outline-primary bt-categoria" for="btnradio4"><img src="./../../../assets/imagens/icon-lazer.png" alt="">Lazer</label>
+
+                <input type="radio" class="btn-check btn-receitas" name="btnradio" id="btnradio5" autocomplete="off">
+                <label class="btn btn-outline-primary bt-categoria" for="btnradio5"><img src="./../../../assets/imagens/icon-alimentacao.png" alt="">Alimentação</label>
+
+                <input type="radio" class="btn-check btn-receitas" name="btnradio" id="btnradio6" autocomplete="off">
+                <label class="btn btn-outline-primary bt-categoria" for="btnradio6"><img src="./../../../assets/imagens/icon-roupas.png" alt="">Roupas</label>
+
+                <input type="radio" class="btn-check btn-receitas" name="btnradio" id="btnradio7" autocomplete="off">
+                <label class="btn btn-outline-primary bt-categoria" for="btnradio7"><img src="./../../../assets/imagens/icon-moradia.png" alt="">Moradia</label>
+
+                <input type="radio" class="btn-check btn-receitas" name="btnradio" id="btnradio8" autocomplete="off">
+                <label class="btn btn-outline-primary bt-categoria" for="btnradio8"><img src="./../../../assets/imagens/icon-outros.png" alt="">Outros</label>
         </div>
         <div class="botoes">
             <button class="botao-adicionar" type="submit">Adicionar</button>
