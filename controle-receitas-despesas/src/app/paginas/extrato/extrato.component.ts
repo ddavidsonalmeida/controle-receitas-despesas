@@ -1,7 +1,9 @@
 
+
 import { Component, OnInit } from '@angular/core';
 import { NgStyle, NgIf, NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
+
 
 import { TransacoesService } from '../../transacoes.service';
 import { Transacao } from './../../transacoes';
@@ -16,7 +18,7 @@ import { DicasRegularizacaoComponent } from '../dicas-regularizacao/dicas-regula
 @Component({
   selector: 'app-extrato',
   standalone: true,
-  imports: [CurrencyPipe, DataPipe, NgStyle, NgIf, NgFor, RouterLink, DicasInvestimentosComponent, DicasRegularizacaoComponent,],
+  imports: [CurrencyPipe, DataPipe, NgStyle, NgIf, NgFor, DicasInvestimentosComponent, DicasRegularizacaoComponent, RouterLink],
   templateUrl: './extrato.component.html',
   styleUrl: './extrato.component.scss'
 })
@@ -35,6 +37,7 @@ export class ExtratoComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTransacoes();
+    
 
   }
 
@@ -78,7 +81,6 @@ export class ExtratoComponent implements OnInit {
   }
 
   selecionarTipo(tipo: string): void {
-
     if (this.tipoSelecionado === tipo) {
       this.tipoSelecionado = '';
       this.transacoesFiltradas = this.transacoes;
@@ -86,9 +88,6 @@ export class ExtratoComponent implements OnInit {
       this.tipoSelecionado = tipo;
       this.transacoesFiltradas = this.transacoes.filter(transacao => transacao.tipo === tipo);
     }
-
-
-
   }
 }
   

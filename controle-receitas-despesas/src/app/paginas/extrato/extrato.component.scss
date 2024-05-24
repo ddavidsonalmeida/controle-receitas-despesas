@@ -1,313 +1,255 @@
 @import "./../../../styles.scss";
 @import "./../../app.component.scss";
 
-.page {
-    
-    .container {
-        display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "box-tabela sidebar";
-        
-        
-        
-       
-
-        .box-tabela {
-            display: flex;
-            flex-direction: column;
-            width: 631px;
-            height: auto;
-            margin-top: 60px;
-            margin-left: 100px;
-            gap: 28px;
-            
-            
-
-            .titulo-botao {
-                width: 631px;
-                height: auto;
-                gap: 41px;
-                display: flex;
-                justify-content: space-between;
-                display: flex;
-
-                .titulo-minhas-transacoes {
-                    width: 399px;
-                    height: 34px;
-                    color: $preto;
-                    font-family: $fonte-padrao;
-                    font-size: $font-extra-grande;
-                    line-height: 34.03px;
-
-                }
-
-                .botao-nova-trasacao{
-                    background-color: $vermelho;
-                    border-radius: $radius-pq;
-                    border: 1px solid $vermelho;
-                    padding: 16px 40px 16px 40px;
-                    gap: 8px;
-                    width: 191px;
-                    height: 49px;                               
-                                
-                    p {
-                        width: 111px;
-                        height: 17px;
-                        font-family: $fonte-padrao;
-                        color: $branco;
-                        line-height: 17.01px;
-                        font-size: $font-pequena;
-                        
-                    }
-                }
-            }
-
-            .menu-botoes {
-                display: flex;
-                gap: 12px;
-                width: 100%;
-                height: auto;
-                margin-bottom: 10px;
-
-                .ativo {
-                    width: 100px;
-                    height: 41px;
-                    color: $cinza-escuro;
-                    border-radius: 24px;
-                    border: 1px solid $cinza-escuro;
-                    background-color: $branco;
-                }
-
-                // .bt-despesa {
-                //     width: 100px;
-                //     height: 41px;
-                //     color: $cinza-escuro;
-                //     border-radius: 24px;
-                //     border: 1px solid $cinza-escuro;
-                //     background-color: $branco;
-                // }
-
-                
-
-            
-            }
-            
-            .table{
-                tbody{
-                    tr{
-                        width: 631px;
-                        height: 82px;
-                        padding: 24px;
-                        border-radius: 12px;
-                        gap: 10px;
-                        background-color: $cinza-medio;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        img{
-                            
-                            align-items: center;
-                            width: 24px;
-                            height: 24px;
-                        } 
-
-
-                        td{
-                            width: 583px;
-                            height: 34px;
-                            gap: 286px;
-                            font-family: $fonte-padrao;
-                        
-                            .data-descricao{
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-between;
-                        
-                                .data{
-                                    width: 130px;
-                                    height: 15px;
-                                    font-family: $fonte-padrao;
-                                    font-size: 8px;
-                                    line-height: 14,58px;
-                                    color: $cinza-claro;
-                                }
-
-                                .descricao{
-                                    width: 180px;
-                                    height: 17px;
-                                    font-family: $fonte-padrao;
-                                    font-size: $font-pequena;
-                                    line-height: 17,01;
-                                    color: $preto;
-                                }
-
-
-
-                            }
-
-
-                        }
-                    }
-                }
-               
-
-
-
-            }
+.container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+    grid-template-areas: "box-tabela sidebar";
+  
+    .box-tabela {
+      display: flex;
+      flex-direction: column;
+      width: 631px;
+      height: auto;
+      margin-top: 60px;
+      margin-left: 100px;
+      gap: 28px;
+  
+      .titulo-botao {
+        width: 631px;
+        height: auto;
+        gap: 41px;
+        display: flex;
+        justify-content: space-between;
+  
+        .titulo-minhas-transacoes {
+          width: 399px;
+          height: 34px;
+          color: $preto;
+          font-family: $fonte-padrao;
+          font-size: $font-extra-grande;
+          line-height: 34.03px;
         }
-
-        .sidebar {
-            width: 100%;
-            height: auto;
-            padding: 50px 45px 70px 20px;
-            margin-top: 7px;
-            margin-bottom: -8px;
-            background-color: $cinza-claro;
-            gap: 2px;
-            margin-left: 120px;
-            
-            
-
-            .container-sidebar {
+  
+        .botao-nova-trasacao {
+          background-color: $vermelho;
+          border-radius: $radius-pq;
+          border: 1px solid $vermelho;
+          padding: 16px 40px 16px 40px;
+          gap: 8px;
+          width: 191px;
+          height: 49px;
+  
+          p {
+            width: 111px;
+            height: 17px;
+            font-family: $fonte-padrao;
+            color: $branco;
+            line-height: 17.01px;
+            font-size: $font-pequena;
+          }
+        }
+      }
+  
+      .menu-botoes {
+        display: flex;
+        gap: 12px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+  
+        button{
+          width: 100px;
+          height: 41px;
+          color: $cinza-escuro;
+          border-radius: 24px;
+          border: 1px solid $cinza-escuro;
+          background-color: $branco;
+          font-family: $fonte-padrao;
+        }
+      }
+  
+      .table {
+        tbody {
+          tr {
+            width: 631px;
+            height: 82px;
+            padding: 24px;
+            border-radius: 12px;
+            gap: 10px;
+            background-color: $cinza-medio;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+  
+            td {
+              width: 583px;
+              height: 34px;
+              gap: 286px;
+              font-family: $fonte-padrao;
+  
+              img {
+                align-items: center;
+                width: 24px;
+                height: 24px;
+              }
+  
+              .data-descricao {
                 display: flex;
                 flex-direction: column;
-                width: 287px;
-                height: auto;
-                gap: 45px;
-                
-
-                .saldo-resultado{
-                    width: 216px;
-                    height: auto;
-                    gap: 24px;
-                    
-
-                    .saldo{
-                        width: 168px;
-                        height: 80px;
-                        display: flex;
-                        flex-direction: column;
-
-                                                
-                        .p {
-                            font-size: 24px;
-                            font-family: Verdana, sans-serif;
-                            width: 138px;
-                            height: 29px;
-                        }
-                        .valor {
-                            color: $vermelho;
-                            font-size: 32px;
-                            width: 168px;
-                            height: 39px;
-                            line-height: 38,89px;
-                        }                         
-                    
-                    }
-                    .resultado {
-                        gap: 36px;
-                        display: flex;
-                        align-items: center;
-                        margin: auto;
-
-                        .treceita{
-                            width: 90px;
-                            height: auto;
-                            gap: 4px;
-                            display: flex;
-                            align-items: center;
-                            .seta{
-                                width: 90px;
-                                height: 19px;
-                            }
-                            .valor3{
-                                width: 90px;
-                                height: 19px;
-                                color: $verde;
-
-                            }
-                            
-                        }
-
-                        .tdespesa{
-                            width: 90px;
-                            height: auto;
-                            gap: 4px;
-                            border-radius: 24px;
-                            display: flex;
-                            .cifrao{
-                                width: 90px;
-                                height: 19px;
-                            }
-                            .valor4{
-                                width: 90px;
-                                height: 19px;
-
-                            }
-                            
-                        }
-
-                    }
-                }                        
-                     
-                .imagem-frase{
-                    width: 287px;
-                    height: auto;
-                    display: flex;
-                    flex-direction: column;
-                    margin: auto;
-                                                           
-                    img{
-                        width: 287px;
-                        height: 171px;
-                        border-radius: 12px;
-                       
-                    }
-                    .precisa-ajuda {
-                        width: 249px;
-                        height: 46px;
-                        font-family: $fonte-padrao;
-                        font-size: 19px;
-                        line-height: 23.09px;
-                        margin: 20px 0 0px 0;
-                        
-                                               
-                    }
-
-
+                justify-content: space-between;
+  
+                .data {
+                  width: 100%;
+                  height: 15px;
+                  font-family: $fonte-padrao;
+                  font-size: $font-pequena;
+                  line-height: 14, 58px;
+                  color: $cinza-claro;
                 }
-
-                
-
-                .botao-investimentos {
-                    padding: 10px 20px;
-                    font-size: 16px;
-                    color: $vermelho;
-                    background-color: $branco;
-                    border-radius: 5px;
-                    border: 1px solid $vermelho;
-                    cursor: pointer;
-                    width: 290px;
-                    margin: auto;
-                    
-                    
-
+  
+                .descricao {
+                  width: 100%;
+                  height: 15px;
+                  font-family: $fonte-padrao;
+                  font-size: $font-pequena;
+                  line-height: 17, 01;
+                  color: $preto;
                 }
-
-                .botao:hover {
-                    background-color: $vermelho;
-                    color: $branco;
-                }
-
+              }
             }
-
-
+          }
         }
-
-
-
+      }
     }
-    
+  
+    .sidebar {
+      width: 100%;
+      height: auto;
+      padding: 50px 45px 70px 20px;
+      margin-top: 7px;
+      margin-bottom: -8px;
+      background-color: $cinza-claro;
+      gap: 2px;
+      margin-left: 120px;
+  
+      .container-sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 287px;
+        height: auto;
+        gap: 45px;
+  
+        .saldo-resultado {
+          width: 216px;
+          height: auto;
+          gap: 24px;
+  
+          .saldo {
+            width: 168px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+  
+            .p {
+              font-size: 24px;
+              font-family: Verdana, sans-serif;
+              width: 138px;
+              height: 29px;
+            }
+  
+            .valor {
+              color: $vermelho;
+              font-size: 32px;
+              width: 168px;
+              height: 39px;
+              line-height: 38, 89px;
+            }
+          }
+  
+          .resultado {
+            gap: 36px;
+            display: flex;
+            align-items: center;
+            margin: auto;
+  
+            .treceita {
+              width: 90px;
+              height: auto;
+              gap: 4px;
+              display: flex;
+              align-items: center;
+  
+              .seta {
+                width: 90px;
+                height: 19px;
+              }
+  
+              .valor3 {
+                width: 90px;
+                height: 19px;
+                color: $verde;
+              }
+            }
+  
+            .tdespesa {
+              width: 90px;
+              height: auto;
+              gap: 4px;
+              border-radius: 24px;
+              display: flex;
+  
+              .cifrao {
+                width: 90px;
+                height: 19px;
+              }
+  
+              .valor4 {
+                width: 90px;
+                height: 19px;
+              }
+            }
+          }
+        }
+  
+        .imagem-frase {
+          width: 287px;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+  
+          img {
+            width: 287px;
+            height: 171px;
+            border-radius: 12px;
+          }
+  
+          .precisa-ajuda {
+            width: 249px;
+            height: 46px;
+            font-family: $fonte-padrao;
+            font-size: 19px;
+            line-height: 23.09px;
+            margin: 20px 0 0px 0;
+          }
+        }
+        .menu-dicas{
+          .button{
+            padding: 10px 20px;
+            font-size: 16px;
+            color: $vermelho;
+            background-color: $branco;
+            border-radius: 5px;
+            border: 1px solid $vermelho;
+            cursor: pointer;
+            width: 290px;
+            margin: auto;
+            
+          }
+        }
+      }
+    }
 }
