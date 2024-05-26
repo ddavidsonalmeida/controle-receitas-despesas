@@ -3,7 +3,6 @@
 
 .container {
     display: flex;
-    flex-direction: row;
     width: 830px;
     height: 628.79px;
     gap: 150px;
@@ -39,14 +38,16 @@
 
 
 .formulario {
-    margin-top: 80px;
+    margin-top: 70px;
     .mb-3 {
         font-family: $fonte-padrao;
         font-size: $font-pequena;
         color: $cinza-escuro;
         width: 399px;
+        margin-top: 25px;
         .form-label {
             height: 29px;
+        
         }
         .form-control {
             height: 53px;
@@ -61,7 +62,7 @@
     font-family: $fonte-padrao;
     color: $branco;
     background-color: $vermelho;
-    width: 399px;
+    width: 415px;
     height: 49px;
     border-radius: 8px;
     border-width: 0px;
