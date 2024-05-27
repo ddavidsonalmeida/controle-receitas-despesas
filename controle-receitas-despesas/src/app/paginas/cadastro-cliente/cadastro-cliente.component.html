@@ -14,22 +14,22 @@
             <form class="formulario" [formGroup]="cadastroForm" (ngSubmit)="cadastrar()">
                 <div class="mb-3">
                     <label for="cadastroNome" class="form-label">Nome Completo</label>
-                    <input type="nome" formControlName="nome" class="form-control" id="cadastroNome" placeholder="Bowie Lovelace" autofocus>
+                    <input type="nome" formControlName="nome" class="form-control" id="cadastroNome" placeholder="Bowie Lovelace" autofocus required>
                 </div>
                 <div class="mb-3">
                     <label for="cadastroEmail" class="form-label">E-mail</label>
-                    <input type="email" formControlName="email" class="form-control" id="cadastroEmail" placeholder="Digite seu e-mail">
+                    <input type="email" formControlName="email" class="form-control" id="cadastroEmail" placeholder="Digite seu e-mail" required>
                 </div>
                 <div class="mb-3">
                     <label for="cadastroTel" class="form-label">Telefone</label>
-                    <input type="text" formControlName="telefone" prefix="+55 " class="form-control" id="cadastroTel" placeholder="(xx) 99999-9999" mask="(00) 00000-0000">
+                    <input type="text" formControlName="telefone" prefix="+55 " class="form-control" id="cadastroTel" placeholder="(xx) 99999-9999" mask="(00) 00000-0000" required>
                 </div>
                 <div class="mb-3">
                     <label for="cadastroSalario" class="form-label">Salário</label>
-                    <input type="text" formControlName="salario" class="form-control" id="cadastroSalario"  placeholder="Insira seu salário aqui" prefix="R$ " mask="separator.2" [thousandSeparator]="'.'"
+                    <input type="text" formControlName="salario" class="form-control" id="cadastroSalario"  placeholder="Insira seu salário aqui" prefix="R$ " mask="separator.2" [thousandSeparator]="'.'" required
                     [decimalMarker]="','" [dropSpecialCharacters]="true">
                 </div>
-                    <button class="botao" type="submit">Finalizar Cadastro</button>
+                    <button class="botao" type="submit" [disabled]="!cadastroForm.valid">Finalizar Cadastro</button>
             </form>
     </div>
             <p class="rodape">2024 | Orgulhosamente construído por "Olá Mundo!"</p>
