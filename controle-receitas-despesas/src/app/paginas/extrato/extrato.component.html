@@ -75,9 +75,10 @@
                     <div class="precisa-ajuda">
                         <p>Precisa de ajuda <br/> com suas finanças?</p>
                     </div>
-                </div>                
-                <!-- <button class="botao-investimentos" routerLink="" >  <img src="./../../../assets/ImgExtrato/setadeSaida.png" alt="Seta de saida"></button> -->
-                <!-- <button (click)="verificarSaldoDicas()"></button> -->
+                </div>      
+                
+                <button *ngIf="saldoSuficiente" class="botao-solicitar-consulta" routerLink="/solicitar-consulta">Solicitar Consulta</button>
+
             </div>
         </div>
     </div>

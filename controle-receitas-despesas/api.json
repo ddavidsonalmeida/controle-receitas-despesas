@@ -3,51 +3,35 @@
     "nome": "NEIDISSON DE JESUS ALMEIDA",
     "email": "davidson.android10@gmail.com",
     "telefone": "11981562304",
-    "salario": 2111
+    "salario": 10000
   },
   "transacoes": [
     {
-      "id": "bb2b"
+      "id": "3c78"
     },
     {
-      "id": "1716818182981",
+      "id": "1716823356985",
       "tipo": "despesa",
-      "descricao": "remedio",
-      "valor": 300,
-      "data": "2024-05-27T13:56:22.981Z",
+      "descricao": "Drogasil",
+      "valor": 211,
+      "data": "2024-05-27T15:22:36.985Z",
       "categoria": "saude"
     },
     {
-      "id": "1716818227738",
-      "tipo": "",
-      "descricao": "bonux",
-      "valor": 3333,
-      "data": "2024-05-27T13:57:07.738Z",
-      "categoria": "outros"
-    },
-    {
-      "id": "1716818274496",
+      "id": "1716823960821",
       "tipo": "receita",
-      "descricao": "bonussass",
-      "valor": 22222,
-      "data": "2024-05-27T13:57:54.496Z",
+      "descricao": "bonus",
+      "valor": 2222,
+      "data": "2024-05-27T15:32:40.821Z",
       "categoria": "outros"
     },
     {
-      "id": "1716819887457",
-      "tipo": "",
-      "descricao": "Drogasil",
-      "valor": 2233,
-      "data": "2024-05-27T14:24:47.457Z",
-      "categoria": "saude"
-    },
-    {
-      "id": "1716819914901",
+      "id": "1716824008483",
       "tipo": "despesa",
-      "descricao": "Drogasil",
-      "valor": 22211,
-      "data": "2024-05-27T14:25:14.901Z",
-      "categoria": "saude"
+      "descricao": "carro",
+      "valor": 4000,
+      "data": "2024-05-27T15:33:28.483Z",
+      "categoria": "outros"
     }
   ]
 }
