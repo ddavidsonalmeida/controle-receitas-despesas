@@ -55,7 +55,7 @@ export class ExtratoComponent implements OnInit {
   }
 
   verificarSaldoSuficiente(): void {
-    this.saldoSuficiente = this.saldo() >= this.salario * 3;
+    this.saldoSuficiente = this.saldo() < this.salario * 3;
   }
 
   totalDespesas(): number {
@@ -73,7 +73,7 @@ export class ExtratoComponent implements OnInit {
       .subscribe(transacoes => {
         this.transacoes = transacoes;
         this.transacoesFiltradas = transacoes;
-        this.verificarSaldoSuficiente(); // Verifica se o saldo é suficiente ao obter as transações
+        this.verificarSaldoSuficiente();
       });
   }
 
@@ -85,7 +85,7 @@ export class ExtratoComponent implements OnInit {
     this.transacoesService.getTransacoes().subscribe((data: Transacao[]) => {
       this.transacoes = data;
       this.transacoesFiltradas = data;
-      this.verificarSaldoSuficiente(); // Verifica se o saldo é suficiente ao carregar as transações
+      this.verificarSaldoSuficiente(); 
     });
   }
 
