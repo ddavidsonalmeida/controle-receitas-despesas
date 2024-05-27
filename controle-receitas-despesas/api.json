@@ -1,26 +1,10 @@
 {
   "cliente": {
-    "nome": "NEIDISSON DE JESUS ALMEIDA",
-    "email": "davidson.android10@gmail.com",
-    "telefone": "11981562304",
-    "salario": 2222
+
   },
   "transacoes": [
     {
-      "id": "1716779546864",
-      "tipo": "despesa",
-      "descricao": "dadasdas",
-      "valor": 2222,
-      "data": "2024-05-27T03:12:26.864Z",
-      "categoria": "roupas"
-    },
-    {
-      "id": "1716779557389",
-      "tipo": "receita",
-      "descricao": "sasa",
-      "valor": 2,
-      "data": "2024-05-27T03:12:37.389Z",
-      "categoria": "saude"
+     
     }
   ]
 }
