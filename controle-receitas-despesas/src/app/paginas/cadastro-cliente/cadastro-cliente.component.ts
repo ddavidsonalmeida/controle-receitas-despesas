@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgxMaskDirective } from 'ngx-mask';
-import { ClienteService } from '../../cliente.service';
+import { ClienteService } from '../../services/cliente.service';
 import { CurrencyPipe } from '@angular/common'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';

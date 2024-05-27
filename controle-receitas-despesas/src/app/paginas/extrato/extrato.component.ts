@@ -4,14 +4,14 @@ import { Component, OnInit } from '@angular/core';
 import { NgStyle, NgIf, NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-import { TransacoesService } from '../../transacoes.service';
+import { TransacoesService } from '../../services/transacoes.service';
 import { Transacao } from '../../model/transacoes';
 
 import { CurrencyPipe } from '@angular/common';
 import { DataPipe } from '../../data.pipe';
 import { DicasInvestimentosComponent } from '../dicas-investimentos/dicas-investimentos.component';
 import { DicasRegularizacaoComponent } from '../dicas-regularizacao/dicas-regularizacao.component';
-import { ClienteService } from '../../cliente.service';
+import { ClienteService } from '../../services/cliente.service';
 
 @Component({
   selector: 'app-extrato',
