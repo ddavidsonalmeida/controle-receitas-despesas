@@ -11,6 +11,7 @@ import { CurrencyPipe } from '@angular/common';
 import { DataPipe } from '../../data.pipe';
 import { DicasInvestimentosComponent } from '../dicas-investimentos/dicas-investimentos.component';
 import { DicasRegularizacaoComponent } from '../dicas-regularizacao/dicas-regularizacao.component';
+import { ClienteService } from '../../cliente.service';
 
 @Component({
   selector: 'app-extrato',
@@ -24,23 +25,36 @@ import { DicasRegularizacaoComponent } from '../dicas-regularizacao/dicas-regula
     RouterLink,
     DicasInvestimentosComponent,
     DicasRegularizacaoComponent
+    
   ],
   templateUrl: './extrato.component.html',
   styleUrls: ['./extrato.component.scss']
 })
 export class ExtratoComponent implements OnInit {
   public date = new Date();
-  salario: number = 12000;
-  receitas: number = 6000;
-  despesas: number = 3000;
+  salario: number = 0;
+  receitas: number = 0;
+  despesas: number = 0;
   transacoes: Transacao[] = [];
   transacoesFiltradas: Transacao[] = [];
   tipoSelecionado: string = '';
 
-  constructor(private transacoesService: TransacoesService) {}
+  constructor(private transacoesService: TransacoesService, private clienteService: ClienteService ) {}
 
   ngOnInit(): void {
     this.getTransacoes();
+    this.getCliente();
+  }
+
+  getCliente(): void {
+    this.clienteService.getCliente().subscribe((data: any) => {
+      this.salario = data.salario;
+    });
+  }
+
+  totalDespesas(): number {
+    const despesas = this.transacoes.filter(transacao => transacao.tipo === 'despesa');
+    return despesas.reduce((total, transacao) => total + transacao.valor, 0);
   }
 
   getTransacoes(): void {
@@ -52,8 +66,15 @@ export class ExtratoComponent implements OnInit {
   }
 
   saldo(): number {
-    return this.receitas - this.despesas;
+    return (this.salario + this.receitas) - this.despesas;
   }
+
+  totalReceitas(): number {
+    const receitas = this.transacoes.filter(transacao => transacao.tipo === 'receita');
+    return receitas.reduce((total, transacao) => total + transacao.valor, 0) + this.salario;
+  }
+
+
 
   carregarTransacoes(): void {
     this.transacoesService.getTransacoes().subscribe((data: Transacao[]) => {

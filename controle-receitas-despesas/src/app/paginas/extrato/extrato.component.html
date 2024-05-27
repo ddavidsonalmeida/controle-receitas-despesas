@@ -36,7 +36,7 @@
                             
                         </td>
                         <td class="data-descricao">
-                            <div class="data">{{transacao.data}}</div> 
+                            <div class="data">{{transacao.data | data:'dd/MM/yyyy'}}</div> 
                             <div class="descricao">{{transacao.descricao}}</div>
                         </td>
                         <td>{{transacao.valor | currency:'BRL'}}</td>
@@ -52,7 +52,7 @@
                     <div class="saldo">
                         <p>Saldo Atual</p>
                         <!-- <p class="valor" [ngStyle]="{'color': transacao.tipo === 'despesa' ? 'red' : 'green'}">{{saldo()}}</p> -->
-                        <p class="valor" [ngStyle]="{'color': saldo()<0 ? 'red' : 'green'}">{{saldo()}}</p>
+                        <p class="valor" [ngStyle]="{'color': saldo()<0 ? 'red' : 'green'}">{{saldo() | currency:'BRL' }}</p>
 
                     </div>
 
@@ -60,12 +60,12 @@
                     <div class="resultado">
                         <div class="treceita">
                             <div class="seta"><img src="./../../../assets/ImgExtrato/setaVerde.png" alt="seta com circulo verde"></div>
-                            <div class="valor3">350,00</div>
+                            <div class="valor3">{{this.totalReceitas() | currency:'BRL'}}</div>
                         </div>
 
                         <div class="tdespesa">
                             <div class="cifrao"><img src="./../../../assets/ImgExtrato/cifraoPreto.png" alt="circulo com cifrão"></div>
-                            <div class="valor4">R$1000,00</div>
+                            <div class="valor4">{{this.totalDespesas() | currency:'BRL' }}</div>
                         </div>
                     </div>
                 </div>

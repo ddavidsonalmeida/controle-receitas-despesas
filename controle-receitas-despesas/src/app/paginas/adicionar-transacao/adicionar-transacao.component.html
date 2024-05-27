@@ -1,49 +1,49 @@
 
 <div class="container">
-    <form #transacao="ngForm" (ngSubmit)="adicionarTransacao(transacao.value)">
+    <form [formGroup]="cadastroForm" (ngSubmit)="adicionarTransacao(cadastroForm.value)">
         <a href="/extrato" class="bt-voltar">&larr; Voltar</a>
         <h1>Nova Transação</h1>
             <label for="tipo" class="mb-3">Tipo</label>
             <!-- novos -->
             <div  class="checkbox-botoes" role="group" aria-label="Basic radio toggle button group">
                 
-                <input  type="radio" class="btn-check btn-despesas" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <input  formControlName="tipo" value= "despesa" type="radio" class="btn-check btn-despesas" name="btnradio" id="btnradio1" autocomplete="off" checked>
                 <label  class="btn btn-outline-danger btn-despesas" for="btnradio1">Despesas</label>
               
-                <input type="radio" class="btn-check btn-receitas" name="btnradio" id="btnradio2" autocomplete="off">
+                <input formControlName="tipo" value= "receita" type="radio" class="btn-check btn-receitas" name="btnradio" id="btnradio2" autocomplete="off">
                 <label class="btn btn-outline-success btn-receitas" for="btnradio2">Receitas</label>
               </div>
 
         <div class="mb-3">
             <label for="descricao" class="form-label">Tipo da Despesa/Receita</label>
-            <input type="text" class="form-control" id="descricao" placeholder="Compras Drogasil">
+            <input type="text" formControlName="descricao" class="form-control" id="descricao" placeholder="Compras Drogasil">
         </div>
         <div class="mb-3">
             <label for="valor" class="form-label">Valor</label>
-            <input type="text" class="form-control" id="valor" placeholder="R$ 100,00" inputmode="decimal" prefix="R$ " mask="separator.2" thousandSeparator=".">
+            <input type="text" formControlName="valor" class="form-control" id="valor" placeholder="R$ 100,00" inputmode="decimal" prefix="R$ " mask="separator.2" thousandSeparator=".">
         </div>
         <div class="mb-3">
             <label for="data" class="form-label">Data</label>
-            <input type="date" class="form-control" id="data">
+            <input type="date" formControlName="data" class="form-control" id="data">
         </div>
         <label for="categoria" class="mb-3">Categoria</label>
         <div class="categoria">
-                <input type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio3" autocomplete="off">
+                <input formControlName="categoria" value="saude" type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio3" autocomplete="off">
                 <label class="btn btn-outline-primary bt-categoria" for="btnradio3"><img src="./../../../assets/imagens/icon-saude.png" alt="">Saúde</label>
 
-                <input type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio4" autocomplete="off">
+                <input formControlName="categoria" value= "lazer" type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio4" autocomplete="off">
                 <label class="btn btn-outline-primary bt-categoria" for="btnradio4"><img src="./../../../assets/imagens/icon-lazer.png" alt="">Lazer</label>
 
-                <input type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio5" autocomplete="off">
+                <input formControlName="categoria" value= "alimentacao" type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio5" autocomplete="off">
                 <label class="btn btn-outline-primary bt-categoria" for="btnradio5"><img src="./../../../assets/imagens/icon-alimentacao.png" alt="">Alimentação</label>
 
-                <input type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio6" autocomplete="off">
+                <input formControlName="categoria" value= "roupas" type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio6" autocomplete="off">
                 <label class="btn btn-outline-primary bt-categoria" for="btnradio6"><img src="./../../../assets/imagens/icon-roupas.png" alt="">Roupas</label>
 
-                <input type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio7" autocomplete="off">
+                <input formControlName="categoria" value= "moradia" type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio7" autocomplete="off">
                 <label class="btn btn-outline-primary bt-categoria" for="btnradio7"><img src="./../../../assets/imagens/icon-moradia.png" alt="">Moradia</label>
 
-                <input type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio8" autocomplete="off">
+                <input formControlName="categoria" value= "outros" type="radio" class="btn-check btn-receitas" name="btnradiocat" id="btnradio8" autocomplete="off">
                 <label class="btn btn-outline-primary bt-categoria" for="btnradio8"><img src="./../../../assets/imagens/icon-outros.png" alt="">Outros</label>
         </div>
         <div class="botoes">

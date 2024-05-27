@@ -1,43 +1,26 @@
 {
-    "cliente": {
-        "id": 1,
-        "nome": "João",
-        "email": "XGK9s@example.com",
-        "telefone": 123456789,
-        "salario": 5000
+  "cliente": {
+    "nome": "NEIDISSON DE JESUS ALMEIDA",
+    "email": "davidson.android10@gmail.com",
+    "telefone": "11981562304",
+    "salario": 2222
+  },
+  "transacoes": [
+    {
+      "id": "1716779546864",
+      "tipo": "despesa",
+      "descricao": "dadasdas",
+      "valor": 2222,
+      "data": "2024-05-27T03:12:26.864Z",
+      "categoria": "roupas"
     },
-    "transacoes": [
-        {
-            "id": 1,
-            "descricao": "Salário",
-            "tipo": "receita",
-            "categoria": "outros",
-            "valor": 8000.00,
-            "data": "2022-01-01"
-        },
-        {
-            "id": 2,
-            "descricao": "Aluguel",
-            "tipo": "despesa",
-            "categoria": "moradia",
-            "valor": 2000.00,
-            "data": "2022-01-01"
-        },
-        {
-            "id": 3,
-            "descricao": "Farmácia",
-            "tipo": "despesa",
-            "categoria": "saúde",
-            "valor": 125.92,
-            "data": "2022-01-01"
-        },
-        {
-            "id": 4,
-            "descricao": "Supermercado",
-            "tipo": "despesa",
-            "categoria": "alimentação",
-            "valor": 327.85,
-            "data": "2022-01-01"
-        }
-    ]
+    {
+      "id": "1716779557389",
+      "tipo": "receita",
+      "descricao": "sasa",
+      "valor": 2,
+      "data": "2024-05-27T03:12:37.389Z",
+      "categoria": "saude"
+    }
+  ]
 }

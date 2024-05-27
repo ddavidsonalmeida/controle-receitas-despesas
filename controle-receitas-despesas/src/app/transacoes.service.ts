@@ -22,7 +22,6 @@ export class TransacoesService {
   }
 
 
-
   getReceitas(): Observable<any>{
     return this.http.get(`${this.url}/receitas`);
   }
