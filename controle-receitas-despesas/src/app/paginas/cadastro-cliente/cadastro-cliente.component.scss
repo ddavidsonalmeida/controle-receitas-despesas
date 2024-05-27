@@ -1,0 +1,78 @@
+@import './../../app.component.scss';
+@import './../../../styles.scss';
+
+.container {
+    display: flex;
+    width: 830px;
+    height: 628.79px;
+    gap: 150px;
+    margin: auto;
+}
+
+.anuncio {
+    margin-top: 80px;
+}
+
+.titulo {
+    font-family: $fonte-padrao;
+    font-size: $font-hiper-grande;
+    font-weight: 400;
+}
+
+.subtitulo {
+    font-family: $fonte-padrao;
+    font-size: $font-media;
+    font-weight: 400;
+    color: $cinza-escuro;
+    margin-top: 1.5em;
+
+}
+
+.imagem1 {
+    width: 257.48px;
+    height: 240.44px;
+    border-radius: 40px;
+    margin-top: 3em;
+    padding-left: 12px;
+}
+
+
+.formulario {
+    margin-top: 70px;
+    .mb-3 {
+        font-family: $fonte-padrao;
+        font-size: $font-pequena;
+        color: $cinza-escuro;
+        width: 399px;
+        margin-top: 25px;
+        .form-label {
+            height: 29px;
+        
+        }
+        .form-control {
+            height: 53px;
+            width: 399px;
+            border-radius: 8px;
+            padding-left: 12px;
+            font-family: $fonte-padrao;
+        }
+    }
+}
+.botao {
+    font-family: $fonte-padrao;
+    color: $branco;
+    background-color: $vermelho;
+    width: 415px;
+    height: 49px;
+    border-radius: 8px;
+    border-width: 0px;
+    gap: 10px;
+    margin-top: 1em;
+}
+.rodape {
+    font-family: $fonte-padrao;
+    font-size: $font-pequena;
+    display: flex;
+    justify-content: center;
+    opacity: 40%;
+}

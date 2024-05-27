@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* FONTES */
+$fonte-padrao: 'Verdana', sans-serif;
+
+/* CORES */
+$preto: #232323;
+$vermelho: #EC0000;
+$branco: #ffffff;
+$cinza-escuro: #5E5E5E;
+$cinza-medio: #EFEFEF;
+$cinza-claro: #F5F5F5;
+$verde: #5BAB3F;
+
+/*TAMANHOS*/
+
+$font-pequena: 14px;
+$font-media: 16px;
+$font-grande: 24px;
+$font-extra-grande: 28px;
+$font-hiper-grande: 36px;
+
+/* BORDAS E ESPAÇAMENTOS */
+$radius-pq: 8px;
+$radius-md: 12px;
+$radius-gd: 24px;
+

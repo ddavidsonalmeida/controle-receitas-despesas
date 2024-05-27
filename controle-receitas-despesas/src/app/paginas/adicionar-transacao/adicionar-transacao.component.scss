@@ -1,0 +1,134 @@
+@import "../../../styles.scss";
+
+.container {
+  display: flex;
+  width: 920px;
+  height: 100%;
+  gap: 130px;
+}
+
+form {
+  .bt-voltar {
+    text-decoration: none;
+    width: 89px;
+    height: 19px;
+    font-family: $fonte-padrao;
+    font-size: $font-media;
+    line-height: 19.45px;
+    color: $vermelho;
+    border: none;
+    background: none;
+  }
+  margin-top: 80px;
+  margin-left: 200px;
+  margin-right: 180px;
+}
+.checkbox-botoes {
+  display: flex;
+  gap: 16px;
+  width: 312px;
+  height: 41px;
+  margin-bottom: 10px;
+}
+
+.btn-despesas {
+  width: 152px;
+  height: 41px;
+  color: $cinza-escuro;
+  border-radius: 8px;
+  border: 1px solid #959191;
+  :hover {
+    color: $vermelho;
+    border-color: $vermelho;
+  }
+}
+
+.btn-receitas {
+  width: 152px;
+  height: 41px;
+  color: $cinza-escuro;
+  border-radius: 8px;
+  border: 1px solid #959191;
+  :hover {
+    color: $verde;
+    border-color: $verde;
+  }
+}
+
+.mb-3 {
+  font-family: $fonte-padrao;
+  font-size: $font-pequena;
+  color: $cinza-escuro;
+  width: 399px;
+}
+
+.form-label {
+  // height: 29px;
+}
+
+.form-control {
+  height: 53px;
+  width: 399px;
+  border-radius: 8px;
+}
+.categoria {
+  width: 359px;
+  height: 90px;
+  gap: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  .bt-categoria {
+    height: 33px;
+    width: auto;
+    border-radius: 24px;
+    border: 1px solid $cinza-escuro;
+    padding: 8px 14px 8px 14px;
+    gap: 4px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: black;
+  }
+
+  .bt-categoria:hover,
+  .bt-categoria:active {
+    color: $vermelho;
+    border-color: $vermelho;
+  }
+}
+.botoes {
+  display: flex;
+  width: 399px;
+  height: 49px;
+  gap: 16px;
+  .botao-adicionar {
+    font-family: $fonte-padrao;
+    color: $branco;
+    background-color: $vermelho;
+    width: 242px;
+    height: 49px;
+    border-radius: 8px;
+    border-width: 0px;
+    padding: 16px 40px 16px 40px;
+    gap: 8px;
+    margin-top: 1em;
+  }
+  .botao-cancelar {
+    font-family: $fonte-padrao;
+    color: $cinza-escuro;
+    font-size: 14px;
+    background-color: $branco;
+    width: 141px;
+    height: 49px;
+    border: 1px solid $cinza-escuro;
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 16px 40px 16px 40px;
+    gap: 8px;
+    margin-top: 1.2em;
+  }
+  // img {
+  //   width: 567px;
+  //   height: 799px;
+  // }
+}

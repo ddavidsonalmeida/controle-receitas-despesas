@@ -1,0 +1,43 @@
+{
+  "cliente": {
+    "nome": "NEIDISSON DE JESUS ALMEIDA",
+    "email": "davidson.android10@gmail.com",
+    "telefone": "11981562304",
+    "salario": 10000
+  },
+  "transacoes": [
+    {},
+    {
+      "id": "1716825872991",
+      "tipo": "despesa",
+      "descricao": "Drogasil",
+      "valor": 2111,
+      "data": "2024-05-27T16:04:32.991Z",
+      "categoria": "saude"
+    },
+    {
+      "id": "1716826283295",
+      "tipo": "receita",
+      "descricao": "Drogasil",
+      "valor": 102,
+      "data": "2024-05-27T16:11:23.295Z",
+      "categoria": "outros"
+    },
+    {
+      "id": "1716828408765",
+      "tipo": "receita",
+      "descricao": "1221",
+      "valor": 2222,
+      "data": "2024-05-27T16:46:48.765Z",
+      "categoria": "outros"
+    },
+    {
+      "id": "1716830582211",
+      "tipo": "despesa",
+      "descricao": "Drogasil",
+      "valor": 11111111,
+      "data": "2024-05-27T17:23:02.211Z",
+      "categoria": "saude"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+<div class="page">
+  <div class="container">
+    <div class="cabecalho">
+      <div class="dicas">
+        <h1>Dicas e Investimentos</h1>
+        <p>Saiba como administrar melhor o seu dinheiro e fazer investimentos certeiros com o seu perfil. </p>
+      </div>
+      <div class="ajuda">
+        <p>Precisa de ajuda?</p>
+        <button>Solicitar Consulta</button>
+      </div>
+    </div>
+    <div class="orientacao">
+      <div class="fonte-dicas">Dicas
+        <div class="indicador-pag-dicas"></div>
+      </div>
+      <div class="fonte-invest">Investimentos
+        <div class="indicador-pag-invest"></div>
+      </div>
+    </div>
+
+    <!-- GRID -->
+
+    <div class="container-grid">
+      <div class="row">
+
+        <!-- CARD -->
+
+        @for (item of listaDeCard; track $index) {
+        <div class="col">
+          <button (click)="abrirModal(item)" class="card1">
+            <div class="card">
+              <img src="{{item.imagem}}" class="card-img-top" alt="imagem do Touro do mercado finaceiro">
+              <p class="card-text">{{item.titulo}}</p>
+            </div>
+          </button>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+
+@if (openmodal) {
+<div class="janela-modal" id="janela-modal">
+  <div class="jmodal">
+    <button (click)="fecharModal()" class="fechar">voltar</button>
+    <h1 class="titulo">{{detalheModal.titulo}}</h1>
+    <img src="{{detalheModal.imagem}}" class="card-img-top" alt="imagem do Touro do mercado finaceiro">
+    <p class="texto">{{detalheModal.texto}}</p>
+  </div>
+</div>
+}

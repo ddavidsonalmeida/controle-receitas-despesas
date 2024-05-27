@@ -1,0 +1,145 @@
+@import "./../../../styles.scss";
+@import "./../../app.component.scss";
+.container {
+  width: 920px;
+  height: 662px;
+  top: 70px;
+  left: 223px;
+  gap: 80px;
+  padding: 5%;
+  margin: auto;
+  font-family: Verdana;
+}
+.cabecalho {
+  display: flex;
+  justify-content: space-evenly;
+  width: 706px;
+  height: 101px;
+  font-size: $font-pequena;
+  h1 {
+    font-size: $font-extra-grande;
+  }
+  p {
+    font-size: $font-pequena;
+  }
+}
+.orientacao {
+  display: flex;
+  justify-content: space-between;
+  width: 920px;
+  height: 37px;
+  gap: 48px;
+  .fonte-dicas {
+    color: $vermelho;
+  }
+  .indicador-pag-dicas {
+    background-color: $vermelho;
+    width: 436px;
+    height: 4px;
+  }
+  .fonte-invest {
+    color: rgb(158, 157, 157);
+  }
+  .indicador-pag-invest {
+    background-color: rgb(158, 157, 157);
+    width: 436px;
+    height: 4px;
+  }
+}
+.ajuda {
+  width: 436px;
+  height: 39px;
+  padding-left: 75px;
+  p {
+    font-size: $font-pequena;
+  }
+  button {
+    width: 222px;
+    height: 49px;
+    border: 1px solid $preto;
+    border-radius: 8px;
+    background-color: $vermelho;
+    color: $branco;
+    line-height: 17px;
+  }
+}
+.container-grid {
+  width: 920px;
+  display: flex;
+  justify-content: space-between;
+
+  .col {
+    .card1 {
+      text-decoration: none;
+      border: none;
+    }
+    .card {
+      width: 290px;
+      height: 190px;
+      top: 8%;
+      img {
+        width: 290px;
+        height: 120px;
+        border-radius: 12px;
+      }
+      .card-text {
+        font-family: verdana;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.45px;
+      }
+    }
+  }
+}
+.janela-modal {
+  width: 100vw;
+  height: 100vh;
+  // position: relative;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.jmodal {
+  width: 800px;
+  height: 400px;
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.607);
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 20px;
+  .titulo {
+    width: 709px;
+    height: 78px;
+    font-family: verdana;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: height 38.89px;
+  }
+  .card-img-top {
+    width: 709px;
+    height: 159px;
+  }
+  .texto {
+    width: 709px;
+    height: 133px;
+    font-family: verdana;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.45px;
+  }
+}
+.fechar {
+  border: none;
+  background-color: transparent;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
