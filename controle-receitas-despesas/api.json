@@ -1,10 +1,53 @@
 {
   "cliente": {
-
+    "nome": "NEIDISSON DE JESUS ALMEIDA",
+    "email": "davidson.android10@gmail.com",
+    "telefone": "11981562304",
+    "salario": 2111
   },
   "transacoes": [
     {
-     
+      "id": "bb2b"
+    },
+    {
+      "id": "1716818182981",
+      "tipo": "despesa",
+      "descricao": "remedio",
+      "valor": 300,
+      "data": "2024-05-27T13:56:22.981Z",
+      "categoria": "saude"
+    },
+    {
+      "id": "1716818227738",
+      "tipo": "",
+      "descricao": "bonux",
+      "valor": 3333,
+      "data": "2024-05-27T13:57:07.738Z",
+      "categoria": "outros"
+    },
+    {
+      "id": "1716818274496",
+      "tipo": "receita",
+      "descricao": "bonussass",
+      "valor": 22222,
+      "data": "2024-05-27T13:57:54.496Z",
+      "categoria": "outros"
+    },
+    {
+      "id": "1716819887457",
+      "tipo": "",
+      "descricao": "Drogasil",
+      "valor": 2233,
+      "data": "2024-05-27T14:24:47.457Z",
+      "categoria": "saude"
+    },
+    {
+      "id": "1716819914901",
+      "tipo": "despesa",
+      "descricao": "Drogasil",
+      "valor": 22211,
+      "data": "2024-05-27T14:25:14.901Z",
+      "categoria": "saude"
     }
   ]
 }

@@ -57,6 +57,11 @@ export class ExtratoComponent implements OnInit {
     return despesas.reduce((total, transacao) => total + transacao.valor, 0);
   }
 
+  totalReceitas(): number {
+    const receitas = this.transacoes.filter(transacao => transacao.tipo === 'receita');
+    return receitas.reduce((total, transacao) => total + transacao.valor, 0) + this.salario;
+  }
+
   getTransacoes(): void {
     this.transacoesService.getTransacoes()
       .subscribe(transacoes => {
@@ -66,15 +71,8 @@ export class ExtratoComponent implements OnInit {
   }
 
   saldo(): number {
-    return (this.salario + this.receitas) - this.despesas;
+    return this.salario + this.totalReceitas() - this.totalDespesas();
   }
-
-  totalReceitas(): number {
-    const receitas = this.transacoes.filter(transacao => transacao.tipo === 'receita');
-    return receitas.reduce((total, transacao) => total + transacao.valor, 0) + this.salario;
-  }
-
-
 
   carregarTransacoes(): void {
     this.transacoesService.getTransacoes().subscribe((data: Transacao[]) => {
