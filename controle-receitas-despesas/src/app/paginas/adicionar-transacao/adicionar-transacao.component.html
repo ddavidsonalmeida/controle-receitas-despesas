@@ -6,14 +6,11 @@
             <label for="tipo" class="mb-3">Tipo</label>
             <!-- novos -->
             <div  class="checkbox-botoes" role="group" aria-label="Basic radio toggle button group">
-                
                 <input  formControlName="tipo" value= "despesa" type="radio" class="btn-check btn-despesas" name="btnradio" id="btnradio1" autocomplete="off" checked>
                 <label  class="btn btn-outline-danger btn-despesas" for="btnradio1">Despesas</label>
-              
                 <input formControlName="tipo" value= "receita" type="radio" class="btn-check btn-receitas" name="btnradio" id="btnradio2" autocomplete="off">
                 <label class="btn btn-outline-success btn-receitas" for="btnradio2">Receitas</label>
               </div>
-
         <div class="mb-3">
             <label for="descricao" class="form-label">Tipo da Despesa/Receita</label>
             <input type="text" formControlName="descricao" class="form-control" id="descricao" placeholder="Compras Drogasil">
