@@ -38,6 +38,7 @@ export class ExtratoComponent implements OnInit {
   transacoes: Transacao[] = [];
   transacoesFiltradas: Transacao[] = [];
   tipoSelecionado: string = '';
+  saldoSuficiente: boolean = false; // Propriedade para controlar a visibilidade do botão
 
   constructor(private transacoesService: TransacoesService, private clienteService: ClienteService ) {}
 
@@ -49,7 +50,12 @@ export class ExtratoComponent implements OnInit {
   getCliente(): void {
     this.clienteService.getCliente().subscribe((data: any) => {
       this.salario = data.salario;
+      this.verificarSaldoSuficiente(); // Verifica se o saldo é suficiente ao obter o salário
     });
+  }
+
+  verificarSaldoSuficiente(): void {
+    this.saldoSuficiente = this.saldo() >= this.salario * 3;
   }
 
   totalDespesas(): number {
@@ -67,17 +73,19 @@ export class ExtratoComponent implements OnInit {
       .subscribe(transacoes => {
         this.transacoes = transacoes;
         this.transacoesFiltradas = transacoes;
+        this.verificarSaldoSuficiente(); // Verifica se o saldo é suficiente ao obter as transações
       });
   }
 
   saldo(): number {
-    return this.salario + this.totalReceitas() - this.totalDespesas();
+    return this.totalReceitas() - this.totalDespesas();
   }
 
   carregarTransacoes(): void {
     this.transacoesService.getTransacoes().subscribe((data: Transacao[]) => {
       this.transacoes = data;
       this.transacoesFiltradas = data;
+      this.verificarSaldoSuficiente(); // Verifica se o saldo é suficiente ao carregar as transações
     });
   }
 
