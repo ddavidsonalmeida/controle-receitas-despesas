@@ -1,27 +1,21 @@
-# ControleReceitasDespesas
+# Projeto final em equipe da turma 1141
+ - O projeto tem como objetivo a criação de um sistema que controle Receitas e Despesas a fim de promover a educação financeira de maneira mais simples e agradável para o usuário.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
 
-## Development server
+ ## Lista de tarefas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Instalação do Angular (Roosevelt) - Ok
+- Criação de componentes (Gladis) - Ok
+- Criação das rotas (Gladis) - Ok
+- Escrever o CSS Global (Davidson) - Ok
+- Implementar o Bootstrap (Davidson) - Ok
+- Criação de pipes (Gladis) - ok
+- Criação de services (Davidson) - ok
+- Criar as interfaces da pagina Dicas de Investimentos (Fábio e Derivaldo)
+- Criar as interfaces da pagina Dicas de Regularização (Fábio e Derivaldo)
+- Criar as interfaces da pagina Extrato (Gladis)
+- Criar as interfaces da pagina Adicionar Transação (Davidson)
+- Criar as interfaces da pagina Cadastro de Clientes (Lucas e Ana)
+- Criar lógica da página Cadastro de Clientes (Ana e Davidson)
+- Criar lógica da página Adicionar Transação (Gladis e Davidson)
+- Criar lógica da página Extrato (Gladis e Davidson)

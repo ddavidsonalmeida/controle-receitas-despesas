@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 import { NgxMaskDirective } from 'ngx-mask';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CurrencyPipe } from '@angular/common';
-import { TransacoesService } from '../../transacoes.service';
+import { TransacoesService } from '../../services/transacoes.service';
 import { FormBuilder } from '@angular/forms';
 
 

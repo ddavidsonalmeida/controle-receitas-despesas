@@ -1,27 +1,10 @@
 {
   "cliente": {
-    "nome": "Fabio Diniz",
-    "email": "difreitas.1977@gmail.com",
-    "telefone": "21986258988",
-    "salario": 5000
+
   },
   "transacoes": [
-    {},
     {
-      "id": "1716839821210",
-      "tipo": "despesa",
-      "descricao": "mercado",
-      "valor": 250,
-      "data": "2024-05-27T19:57:01.210Z",
-      "categoria": "alimentacao"
-    },
-    {
-      "id": "1716839840966",
-      "tipo": "receita",
-      "descricao": "bonus",
-      "valor": 300,
-      "data": "2024-05-27T19:57:20.966Z",
-      "categoria": "outros"
+
     }
   ]
 }
