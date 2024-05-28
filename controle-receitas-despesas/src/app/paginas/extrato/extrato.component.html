@@ -12,7 +12,7 @@
 
             <div class="menu-botoes">
                 <button (click)="selecionarTipo('receita')" [class.ativo]="tipoSelecionado ==='receita'">Receita</button>
-                                   
+
                 <button (click)="selecionarTipo('despesa')" [class.ativo]="tipoSelecionado ==='despesa'">Despesa</button>
             </div>
 
@@ -24,7 +24,7 @@
                 <span *ngIf="mostrarElemento">
                     <button class="bt-despesa" type="button" (click) = "selecionar ('despesa')" [class.selected]="selecionado==='despesa' ">Despesa</button>
                 </span>
-                
+
             </div> -->
 
             <table class="table">
@@ -33,10 +33,10 @@
                         <td>
                             <span *ngIf="transacao.tipo === 'despesa'"> <img src="./../../../assets/ImgExtrato/setaVermelhabaixo.png" alt="imagem seta vermelha indicando despesa"> </span>
                             <span *ngIf="transacao.tipo === 'receita'"> <img src="./../../../assets/ImgExtrato/cifraoVermelho.png" alt="imagem cifrão vermelha indicando receita"> </span>
-                            
+
                         </td>
                         <td class="data-descricao">
-                            <div class="data">{{transacao.data | data:'dd/MM/yyyy'}}</div> 
+                            <div class="data">{{transacao.data | data:'dd/MM/yyyy'}}</div>
                             <div class="descricao">{{transacao.descricao}}</div>
                         </td>
                         <td>{{transacao.valor | currency:'BRL'}}</td>
@@ -75,9 +75,9 @@
                     <div class="precisa-ajuda">
                         <p>Precisa de ajuda <br/> com suas finanças?</p>
                     </div>
-                </div>      
-                
-                <button *ngIf="saldoSuficiente" class="botao-solicitar-consulta" routerLink="/solicitar-consulta">Solicitar Consulta</button>
+                </div>
+
+                <button *ngIf="saldoSuficiente" class="botao-solicitar-consulta" routerLink="/dicas-investimentos"><p>Dicas de Investimentos.<img src="./../../../assets/ImgExtrato/setadeSaida.png" alt="Seta de saida"></p></button>
 
             </div>
         </div>

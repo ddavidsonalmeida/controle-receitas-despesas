@@ -1,43 +1,27 @@
 {
   "cliente": {
-    "nome": "NEIDISSON DE JESUS ALMEIDA",
-    "email": "davidson.android10@gmail.com",
-    "telefone": "11981562304",
-    "salario": 10000
+    "nome": "Fabio Diniz",
+    "email": "difreitas.1977@gmail.com",
+    "telefone": "21986258988",
+    "salario": 5000
   },
   "transacoes": [
     {},
     {
-      "id": "1716825872991",
+      "id": "1716839821210",
       "tipo": "despesa",
-      "descricao": "Drogasil",
-      "valor": 2111,
-      "data": "2024-05-27T16:04:32.991Z",
-      "categoria": "saude"
+      "descricao": "mercado",
+      "valor": 250,
+      "data": "2024-05-27T19:57:01.210Z",
+      "categoria": "alimentacao"
     },
     {
-      "id": "1716826283295",
+      "id": "1716839840966",
       "tipo": "receita",
-      "descricao": "Drogasil",
-      "valor": 102,
-      "data": "2024-05-27T16:11:23.295Z",
+      "descricao": "bonus",
+      "valor": 300,
+      "data": "2024-05-27T19:57:20.966Z",
       "categoria": "outros"
-    },
-    {
-      "id": "1716828408765",
-      "tipo": "receita",
-      "descricao": "1221",
-      "valor": 2222,
-      "data": "2024-05-27T16:46:48.765Z",
-      "categoria": "outros"
-    },
-    {
-      "id": "1716830582211",
-      "tipo": "despesa",
-      "descricao": "Drogasil",
-      "valor": 11111111,
-      "data": "2024-05-27T17:23:02.211Z",
-      "categoria": "saude"
     }
   ]
 }
